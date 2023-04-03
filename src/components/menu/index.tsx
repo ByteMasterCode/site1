@@ -6,10 +6,13 @@ import {data} from "autoprefixer";
 
 export default function Menu() {
     const [posts, setPosts] = useState([]);
+
+
+
     useEffect(() => {
         fetch('http://167.172.176.175/api/menu/?lang=uz')
-            .then((response) => response.json())
-            .then((data) => {
+            .then(async (response) => response.json())
+            .then( (data) => {
                 console.log(data);
                 setPosts(data);
             })
@@ -25,7 +28,7 @@ export default function Menu() {
                         <div className={styles.logo}>
 
                             <img src={logo} alt={'Navoiy Uran'} />
-
+                            <h1>Navoiy Uran</h1>
                         </div>
 
                     </li>

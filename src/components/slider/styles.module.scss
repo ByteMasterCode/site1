@@ -18,8 +18,7 @@
 }
 
 .control{
-  @apply flex w-[30px] h-[30px]
-}
+  @apply flex w-[30px] h-full items-center}
 
 .title{
   @apply   w-[100vh] h-[40vh]  z-[2] absolute mt-40 flex flex-col
@@ -31,3 +30,4 @@
 .area{
   @apply w-[700px] h-[300px] bg-black/[0.6] mt-10 ml-10 rounded-lg cursor-pointer pr-2
 }
+
