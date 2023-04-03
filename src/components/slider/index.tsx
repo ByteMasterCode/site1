@@ -1,5 +1,5 @@
 import react, {useEffect, useState} from 'react';
-import styles from './styles.module.scss'
+import styles from './styles.module.css'
 import img_1 from '../../resources/img/img_1.jpg';
 import img_2 from '../../resources/img/img_2.jpg';
 import img_3 from '../../resources/img/img_3.jpg';
