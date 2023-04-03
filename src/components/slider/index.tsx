@@ -90,7 +90,7 @@ export default function Slider() {
         <div className={styles.container}>
             <div id={'wrap'} className={styles.wrapper}>
 
-            {sliders.map((info:SliderModel,index)=>
+            {images.map((info,index)=>
                 <div key={index} className={styles.img} style={{transform: `translateX(${pos}px)`}}>
                     <div className={styles.title}>
                         <div className={styles.area}>
@@ -104,7 +104,7 @@ export default function Slider() {
                             </div>
                         </div>
                     </div>
-                    <img src={'http://167.172.176.175/storage/'+info.image} className={'w-full h-full'}/>
+                    <img src={info.img} className={'w-full h-full'}/>
                 </div>
             )}
 
