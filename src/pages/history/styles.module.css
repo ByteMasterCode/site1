@@ -1,0 +1,9 @@
+.container {
+  @apply w-screen h-screen overflow-hidden;
+}
+
+.content {
+  @apply flex  flex-col h-screen;
+}
+
+/*# sourceMappingURL=styles.module.css.map */

@@ -1,0 +1,6 @@
+.container{
+  @apply flex flex-row w-full h-[30vh] bg-green-200 justify-end
+}
+.item{
+  @apply flex bg-red-400 w-[30vh] h-full ml-5 
+}

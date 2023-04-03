@@ -1,0 +1,5 @@
+.container {
+  @apply w-screen h-screen bg-black   flex-nowrap;
+}
+
+/*# sourceMappingURL=styles.module.css.map */

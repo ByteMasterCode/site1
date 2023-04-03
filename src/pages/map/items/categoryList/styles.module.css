@@ -1,0 +1,46 @@
+.container {
+  @apply flex flex-row translate-y-[50vh] absolute  w-full h-[100vh]  justify-end;
+}
+
+.item {
+  @apply flex flex-col flex-nowrap w-[26vh] h-[50vh]  ml-1 -skew-x-12 duration-300 cursor-pointer duration-[4000];
+  box-shadow: inset 44px 0 53px -62px #a3a3a3;
+}
+.item h1 {
+  @apply text-gray-300 text-7xl font-extrabold mt-2 ml-3;
+}
+
+.item:hover {
+  @apply -translate-y-12 drop-shadow-md bg-emerald-600/70;
+  box-shadow: inset 30px 0 53px -62px #037500;
+}
+.item:hover .paralel {
+  @apply drop-shadow-md;
+}
+.item:hover .title {
+  @apply z-0 text-white;
+}
+.item:hover .description {
+  @apply h-full text-white text-[10px];
+}
+.item:hover h1 {
+  @apply text-white;
+}
+
+.item:last-child {
+  @apply mr-10;
+}
+
+.paralel {
+  @apply flex w-[14wh] h-[20%];
+}
+
+.description {
+  @apply flex ml-[2vh] mt-[1vh];
+}
+
+.title {
+  @apply flex absolute  text-xl font-bold ml-[120px] mt-[45%];
+}
+
+/*# sourceMappingURL=styles.module.css.map */

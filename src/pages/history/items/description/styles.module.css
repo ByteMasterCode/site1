@@ -1,0 +1,5 @@
+.container {
+  @apply w-[50vh] h-[80vh] absolute bg-emerald-500;
+}
+
+/*# sourceMappingURL=styles.module.css.map */

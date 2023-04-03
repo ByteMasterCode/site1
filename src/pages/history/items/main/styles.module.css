@@ -1,0 +1,9 @@
+.container {
+  @apply flex flex-col w-full h-full;
+}
+
+.years {
+  @apply flex flex-row w-full h-full;
+}
+
+/*# sourceMappingURL=styles.module.css.map */

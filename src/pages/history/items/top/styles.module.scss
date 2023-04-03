@@ -1,0 +1,11 @@
+.box{
+@apply flex w-full h-[20vh] flex flex-row absolute mt-10
+}
+
+.title{
+  @apply uppercase text-[40px] text-slate-500 font-bold mt-2
+}
+
+.logo{
+  @apply w-[80vh]  flex
+}

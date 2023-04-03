@@ -1,0 +1,49 @@
+.container{
+  @apply flex flex-col w-full  ;
+  h1{
+    @apply font-bold text-4xl text-zinc-300 m-5
+  }
+}
+
+.item{
+  @apply flex flex-row flex-nowrap
+}
+
+.mask{
+  @apply flex w-[80rem] h-[40rem] rounded-full overflow-hidden m-10 ml-16
+}
+
+.content{
+  @apply flex flex-col  w-full
+}
+
+.list{
+  @apply flex flex-col w-full h-[44vh];
+
+}
+.description {
+  @apply flex w-full h-full flex-nowrap text-2xl  z-0 p-5
+}
+
+.list h1{
+    @apply flex self-center m-auto  border-l-4 border-green-400 pl-2;
+}
+
+.products{
+  @apply flex flex-row h-[35vh]  justify-center
+}
+.product_item{
+  @apply flex flex-row  w-1/4  m-auto ;
+  .description{
+    @apply flex w-full m-auto flex-col ;
+    h3{
+      @apply flex font-bold
+    }
+  }
+
+
+}
+.product_item path{
+  fill: green;
+}
+

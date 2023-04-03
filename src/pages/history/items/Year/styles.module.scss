@@ -1,0 +1,13 @@
+.container{
+  @apply flex  w-full items-stretch z-0 cursor-pointer
+}
+
+.container h1 {
+  @apply flex absolute rounded-2xl pl-2 pr-2 m-auto translate-x-[80vh]  translate-y-[20vh] duration-300  text-white  text-[10rem] font-bold opacity-[50%] border-2 border-white
+}
+
+.container h1:hover{
+
+  @apply border-0 opacity-[100%] border-0 bg-green-400 rounded-2xl border-2
+
+}

@@ -1,0 +1,9 @@
+.container{
+  @apply flex w-screen h-screen
+}
+.uzbekistan{
+  @apply flex absolute w-[10vh] h-[7vh] translate-x-[124vh] translate-y-[37vh] cursor-pointer
+}
+.hov:hover{
+  @apply fill-green-500 text-green-500 w-[12vh] h-[12vh]
+}

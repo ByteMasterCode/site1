@@ -1,0 +1,40 @@
+.container {
+  @apply flex flex-col w-screen h-screen;
+}
+
+.main {
+  @apply flex  h-[70vh] w-[68vh] bg-green-400;
+}
+
+.news {
+  @apply flex h-[70vh] w-[43.7vh] bg-green-800 border-2;
+}
+
+.wrapper {
+  @apply flex w-full flex-row;
+}
+
+.wrapper:last-child {
+  @apply flex w-full flex-row-reverse;
+}
+
+.categories {
+  @apply flex flex-row  w-full;
+}
+.categories h1 {
+  @apply flex border-l-8 border-green-400 pl-4 ml-5 mt-5 text-7xl;
+}
+.categories ul {
+  @apply flex flex-row  m-auto self-end mr-24 mt-10 justify-center;
+}
+.categories ul li {
+  @apply flex ml-5 m-auto text-2xl  text-center cursor-pointer duration-300 text-2xl;
+}
+.categories ul li:hover {
+  @apply border-b-4 border-green-400 text-3xl;
+}
+.categories ul li:first-child {
+  @apply border-b-4 border-green-400 text-green-400;
+}
+
+/*# sourceMappingURL=styles.module.css.map */

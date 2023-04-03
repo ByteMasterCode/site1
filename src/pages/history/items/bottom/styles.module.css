@@ -1,0 +1,33 @@
+.container {
+  @apply flex flex-row   w-full h-[20vh]    bg-green-400/30 z-0 translate-y-[80vh];
+}
+
+.core {
+  @apply flex h-[20vh] w-[52vh] bg-[url("../../../../resources/img/bottom-slider.svg")] bg-no-repeat;
+}
+
+.box {
+  @apply duration-300 cursor-pointer p-1;
+}
+
+.box:hover {
+  @apply -translate-y-10 shadow-2xl shadow-black/70 opacity-90 rounded-md;
+}
+
+h2 {
+  @apply flex absolute text-white text-[4vh] font-bold bg-yellow-600 -translate-x-2 translate-y-28;
+}
+
+.title {
+  @apply flex flex-row;
+}
+
+.title_description {
+  @apply flex text-white w-full ml-2 text-lg font-bold opacity-40 cursor-pointer duration-300;
+}
+
+.title_description:hover {
+  @apply opacity-100;
+}
+
+/*# sourceMappingURL=styles.module.css.map */
