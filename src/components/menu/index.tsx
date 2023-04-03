@@ -8,9 +8,9 @@ export default function Menu() {
     const [posts, setPosts] = useState([]);
 
 
-
+    const headers = { "Content-Type": "application/json",};
     useEffect(() => {
-        fetch('http://167.172.176.175/api/menu/?lang=uz')
+        fetch('http://167.172.176.175/api/menu/?lang=uz',{method:"GET",headers})
             .then(async (response) => response.json())
             .then( (data) => {
                 console.log(data);
