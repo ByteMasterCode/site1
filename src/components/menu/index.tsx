@@ -10,7 +10,7 @@ export default function Menu() {
 
     const headers = { "Content-Type": "application/json",};
     useEffect(() => {
-        fetch('http://167.172.176.175/api/menu/?lang=uz',{method:"GET",headers})
+        fetch('http://167.172.176.175/api/menu/?lang=uz',{method:"GET",headers:{ 'Accept': 'application/json'}})
             .then(async (response) => response.json())
             .then( (data) => {
                 console.log(data);
