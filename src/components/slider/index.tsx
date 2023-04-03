@@ -10,7 +10,7 @@ export default function Slider() {
     const [sliders, setsliders] = useState([]);
     const headers = { "Content-Type": "application/json",};
     useEffect(() => {
-        fetch('http://167.172.176.175/api/sliders/?lang=uz',{method:"GET",headers:headers})
+         fetch('http://167.172.176.175/api/sliders/?lang=uz',{method:"GET",headers: { 'Accept': 'application/json'}})
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
