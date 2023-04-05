@@ -1,27 +1,47 @@
 import react, {useEffect, useState} from 'react'
 import logo from '../../resources/img/logo.svg'
-import styles from './styles.module.css'
+import styles from './styles.module.scss'
 import {useGetMenusQuery} from "../../store/menus/menus.api";
 import {data} from "autoprefixer";
 import {Menus, SubMenu} from "../../model/Menus";
 import ContentMenu from "../content_menu/contentMenu";
 import {Routes,Route,Link}from 'react-router-dom';
+import axios from "axios";
 export default function Menu() {
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState<Menus[]>([]);
+     const getAPI = async (url: string, data: any): Promise<any> =>{
+        return await axios({
 
-
+            url: `http://167.172.176.175/api/menu/?lang=uz`,
+        }).then ( (response) => {
+            console.log(response)
+            return {
+                status: response.status,
+                data: response.data
+            }
+        }).catch((error) =>{
+            console.log(error)
+            return {
+                status: error.status,
+                data: error.response
+            }
+        })
+    }
+    // @ts-ignore
+    const getData = () => getAPI().then(
+        (res) => {
+            if(res.status === 200){
+                setPosts(res.data)
+                console.log(data)
+            }else{
+                console.log(res)
+            }
+        })
     const headers = {"Content-Type": "application/json",};
     useEffect(() => {
-        fetch('http://167.172.176.175/api/menu/?lang=uz', {method: "GET", headers: {'Accept': 'application/json'}})
-            .then(async (response) => response.json())
-            .then((data) => {
-                console.log(data);
-                setPosts(data);
-            })
-            .catch((err) => {
-                console.log(err.message);
-            });
+getData();
     }, []);
+
     let checker = (submenu: SubMenu[]) => {
         if (submenu.length > 0) {
             return (<div className={styles.sub}>

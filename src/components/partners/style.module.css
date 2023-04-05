@@ -15,13 +15,13 @@
 }
 
 .anim_vetical {
-    @apply w-[80px] h-[7px] bg-green-500  absolute mt-[34.8vh] left-[0] shadow-2xl shadow-green-900 ;
+    @apply w-[80px] h-[7px] bg-green-500  absolute mt-[34.6vh] left-[0] shadow-2xl shadow-green-900 ;
     animation-name: vertical1;
     animation-duration: 20s;
     animation-iteration-count: infinite;
 }
 .anim_horizontal2{
-    @apply w-[80px] h-[7px] bg-green-500  absolute mt-[34.8vh] right-[0] shadow-2xl shadow-green-900 ;
+    @apply w-[80px] h-[7px] bg-green-500  absolute mt-[34.5vh] right-[0] shadow-2xl shadow-green-900 ;
     animation-name: vertical2;
     animation-duration: 25s;
     animation-iteration-count: infinite;
