@@ -20,7 +20,7 @@ export default function Menu() {
                 data: response.data
             }
         }).catch((error) =>{
-            console.log(error)
+            console.log(error.data)
             return {
                 status: error.status,
                 data: error.response
