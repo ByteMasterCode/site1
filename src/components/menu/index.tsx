@@ -1,6 +1,6 @@
 import react, {useEffect, useState} from 'react'
 import logo from '../../resources/img/logo.svg'
-import styles from './styles.module.scss'
+import styles from './styles.module.css'
 import {useGetMenusQuery} from "../../store/menus/menus.api";
 import {data} from "autoprefixer";
 import {Menus, SubMenu} from "../../model/Menus";
