@@ -20,7 +20,7 @@ export default function Content() {
                     <img className={'w-full h-full '} src={factory} />
 
                     <img
-                        className={'w-[185vh] h-[79.5vh] -translate-x-[47.5vh] rotate-[1deg] translate-y-10 absolute'}
+                        className={'w-[185vw] h-[79.5vh] -translate-x-[28vw] rotate-[1deg] translate-y-10 absolute'}
                         src={half}/>
                 </div>
 

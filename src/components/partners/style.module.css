@@ -1,10 +1,92 @@
-.container{
-    @apply flex flex-wrap flex-col w-full h-auto
+.container {
+    @apply flex flex-wrap flex-col w-full h-auto bg-[#212529]
 }
 
 .item {
-    @apply flex justify-center w-[32vw] h-[40vh] p-10 m-2 cursor-pointer border-2 border-green-300
+
 }
-.wrapper{
-    @apply flex flex-wrap flex-row
+
+.item:hover{
+    @apply border-white border-2
+}
+
+.wrapper {
+    @apply flex flex-wrap flex-row m-6 overflow-hidden
+}
+
+.anim_vetical {
+    @apply w-[80px] h-[7px] bg-green-500  absolute mt-[34.8vh] left-[0] shadow-2xl shadow-green-900 ;
+    animation-name: vertical1;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+.anim_horizontal2{
+    @apply w-[80px] h-[7px] bg-green-500  absolute mt-[34.8vh] right-[0] shadow-2xl shadow-green-900 ;
+    animation-name: vertical2;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+.anim_horizontal {
+    @apply w-[7px] h-[80px] bg-green-500  absolute shadow-2xl shadow-green-900 left-[33.3vw] translate-y-[-4vh];
+    animation-name: horizontal;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes vertical1 {
+    25% {
+        transform: translateX(95vw);
+
+    }
+    50% {
+        transform: translateX(0vw);
+
+    }
+    75% {
+        transform: translateX(95vw);
+
+    }
+    100% {
+        transform: translateX(0vw);
+
+    }
+}
+@keyframes vertical2 {
+    25% {
+        transform: translateX(-95vw);
+
+    }
+    50% {
+        transform: translateX(0vw);
+
+    }
+    75% {
+        transform: translateX(-95vw);
+
+    }
+    100% {
+        transform: translateX(0vw);
+
+    }
+}
+
+
+@keyframes horizontal {
+    25% {
+        transform: translateY(95vh);
+
+    }
+    50% {
+        transform: translateY(-3vh);
+
+    }
+    75% {
+        transform: translateY(95vh);
+
+
+    }
+    100% {
+        transform: translateY(-3vh);
+
+    }
 }

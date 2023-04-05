@@ -1,18 +1,20 @@
 import react, {useEffect, useState} from 'react'
 import logo from '../../resources/img/logo.svg'
-import styles from './styles.module.scss'
+import styles from './styles.module.css'
 import {useGetMenusQuery} from "../../store/menus/menus.api";
 import {data} from "autoprefixer";
-
+import {Menus, SubMenu} from "../../model/Menus";
+import ContentMenu from "../content_menu/contentMenu";
+import {Routes,Route,Link}from 'react-router-dom';
 export default function Menu() {
     const [posts, setPosts] = useState([]);
 
 
-    const headers = { "Content-Type": "application/json",};
+    const headers = {"Content-Type": "application/json",};
     useEffect(() => {
-        fetch('http://167.172.176.175/api/menu/?lang=uz',{method:"GET",headers:{ 'Accept': 'application/json'}})
+        fetch('http://167.172.176.175/api/menu/?lang=uz', {method: "GET", headers: {'Accept': 'application/json'}})
             .then(async (response) => response.json())
-            .then( (data) => {
+            .then((data) => {
                 console.log(data);
                 setPosts(data);
             })
@@ -20,31 +22,68 @@ export default function Menu() {
                 console.log(err.message);
             });
     }, []);
+    let checker = (submenu: SubMenu[]) => {
+        if (submenu.length > 0) {
+            return (<div className={styles.sub}>
+                {submenu.map((value) => <div><Link to={`/menu?id=${value.id}&type=${value.type.name}`}> {value.name}</Link></div>)}
+            </div>)
+
+        } else {
+            return (
+                <div></div>
+            )
+        }
+    }
+
+
     return (
+
         <div className={styles.container}>
+
             <div className={styles.list}>
+
                 <ul>
                     <li>
                         <div className={styles.logo}>
-
-                            <img src={logo} alt={'Navoiy Uran'} />
-                            <h1>Navoiy Uran</h1>
+                        <Link to={'/'}>    <img  src={logo} alt={'Navoiy Uran'}/></Link>
                         </div>
-
+                        <Link to={'/'}>   <h1>Navoiy Uran</h1></Link>
                     </li>
-                    {posts.map((post)=>{
+                    {posts.map((post: Menus) => {
 
-                        return(
-                                // @ts-ignore
-                                <li>{post.name}</li>
+
+                        return (
+                              <li>
+
+                                  <div className='flex h-full items-center'>  {post.name}  </div>
+                                     <div className='fixed text-white'> {checker(post.sub_menu)}</div>
+
+                                </li>
+
+
                         )
                     })}
 
+                    <div className='flex  w-40 h-full items-center'>
+                        <div className='flex flex-row w-40 h-10 ml-1 mr-4 bg-gray-200 rounded-2xl items-center'>
 
+                            <div className='ml-1 w-12 h-8 rounded-2xl text-[18px] bg-white text-center font-bold'>uz
+                            </div>
+                            <div
+                                className='ml-1 w-12 h-8 rounded-2xl text-[18px] text-gray-400 text-center font-bold'>рус
+                            </div>
+                            <div
+                                className='ml-1 w-12 h-8 rounded-2xl text-[18px] text-gray-400  text-center font-bold'>eng
+                            </div>
+                        </div>
 
+                    </div>
                 </ul>
+
             </div>
+
         </div>
+
     )
 
 }

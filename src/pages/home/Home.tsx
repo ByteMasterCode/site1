@@ -7,7 +7,7 @@ export default function Home(){
     const [image,imageState] = useState();
     return(
         <div className={styles.container}>
-            <Menu/>
+
             <Slider/>
 
         </div>

@@ -6,11 +6,11 @@
 }
 
 .item {
-  @apply flex flex-row flex-nowrap;
+  @apply flex flex-row ;
 }
 
 .mask {
-  @apply flex w-[80rem] h-[40rem] rounded-full overflow-hidden m-10 ml-16;
+  @apply flex w-[80vw] h-[80vh] rounded-full overflow-hidden m-10 ml-16;
 }
 
 .content {
