@@ -23,7 +23,7 @@ class Partners extends Component {
                             className="flex justify-center w-[32vw] h-[40vh] p-10   cursor-pointer border-r-2 border-b-2  border-green-300">
                             <div className={style.anim_vetical}></div>
                             <div className={style.anim_horizontal}></div>
-                            <img className="w-[200px] h-[200px] " src={ngmk}/></div>
+                            <img className="w-[250px] h-[230px] " src={ngmk}/></div>
                     </a>
                     <a target="_blank" href='https://reso.ru/'>
                         <div

@@ -1,6 +1,5 @@
 .container{
-  @apply flex w-screen h-screen
-}
+  @apply flex w-full h-full}
 .uzbekistan{
   @apply flex absolute w-[10vh] h-[7vh] translate-x-[124vh] translate-y-[37vh] cursor-pointer
 }

@@ -1,5 +1,5 @@
 .container{
-  @apply flex flex-row translate-y-[50vh] absolute  w-full h-[100vh]  justify-end
+  @apply flex flex-row translate-y-[50vh] absolute  w-full h-full  justify-end
 }
 .item{
   @apply flex flex-col flex-nowrap w-[26vh] h-[50vh]  ml-1 -skew-x-12 duration-300 cursor-pointer duration-[4000];

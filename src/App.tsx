@@ -21,10 +21,11 @@ function App() {
     })
     return (
 
-        <div className={'flex flex-col '}>
+        <div className={'flex flex-col'}>
             <Menu/>
+            <></>
             <Routes>
-                <Route path="/menu" element={<ContentMenu/>}/>
+                <Route path="/menu/:id/:type"   element={<ContentMenu/>}/>
             </Routes>
             <Routes><Route path="/" element={<Main/>}/>
                 <Route
@@ -33,7 +34,9 @@ function App() {
                 />
 
             </Routes>
-
+            <section>
+                <Footer/>
+            </section>
         </div>
     );
 }

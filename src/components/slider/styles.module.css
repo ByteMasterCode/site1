@@ -3,15 +3,15 @@
 }
 
 .wrapper {
-  @apply h-full  overflow-hidden flex flex-nowrap;
+  @apply w-screen h-full  overflow-hidden flex flex-nowrap;
 }
 
 .img {
-  @apply w-full h-full flex-[0_0_auto] duration-[2s] relative ease-in-out;
+  @apply w-full h-full flex-[0_0_auto]  duration-[2s]  ease-in-out;
 }
 
 .controller {
-  @apply w-full flex flex-row relative   self-end h-[15vh] bg-emerald-500/80   self-end -translate-y-[15vh];
+  @apply w-full flex flex-row relative   self-end h-[15vh] bg-emerald-500/80    -translate-y-[15vh];
 }
 
 .control {

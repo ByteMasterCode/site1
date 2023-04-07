@@ -1,33 +1,43 @@
-.container {
-  @apply flex  w-full h-[7vh] bg-white/100 pt-3 absolute z-[1] duration-300 fixed overflow-auto;
+.container{
+  @apply flex sticky top-0  w-full h-14 bg-white/100 shadow-lg   duration-300 z-[1]
+}
+.container:hover{
+  @apply bg-white
 }
 
-.container:hover {
-  @apply bg-white;
+
+.list{
+  @apply w-full h-full
 }
 
-.list {
-  @apply w-full h-full;
+nav ul {
+  @apply w-full justify-end}
+
+
+.list ul li{
+  @apply flex flex-col relative ml-5 cursor-pointer border-r-2 pr-4;
+
+}
+.list ul li:hover .sub{
+  @apply flex flex-col text-left;
 }
 
-.list ul {
-  @apply w-full   flex flex-row  text-xl mr-auto justify-end;
+
+
+.list ul  li:first-child{
+  @apply  flex flex-row self-start m-auto   self-start    border-0 p-0 items-center}
+nav ul li:nth-child(2){
+  @apply  text-green-400
 }
 
-.list ul li {
-  @apply ml-5 cursor-pointer border-r-2 pr-4;
-}
 
-.list ul li:first-child {
-  @apply flex self-start m-auto  w-12   border-0 p-0;
-}
 
-.list ul li:nth-child(2) {
-  @apply text-green-400;
+.list ul li:last-child{
+  @apply mr-5 border-0
 }
-
-.list ul li:last-child {
-  @apply mr-5 border-0;
+.logo{
+  @apply flex flex-row
 }
-
-/*# sourceMappingURL=styles.module.css.map */
+.sub{
+  @apply fixed mt-10 w-auto h-auto  bg-black hidden
+}

@@ -24,29 +24,7 @@ export default function Slider() {
                 console.log(err.message);
             });
     }, []);
-    const images = [
-        {
-            img: img_1,
-            title: 'Zafarobod',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda nam natus non perferendis quam. Amet,\n' +
-                '        aspernatur dicta excepturi illo ipsa minus obcaecati odit quaerat quisquam reiciendis, repellat suscipit\n' +
-                '        unde?'
-        },
-        {
-            img: img_2,
-            title: 'text_2',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda nam natus non perferendis quam. Amet,\n' +
-                '        aspernatur dicta excepturi illo ipsa minus obcaecati odit quaerat quisquam reiciendis, repellat suscipit\n' +
-                '        unde?'
-        },
-        {
-            img: img_3,
-            title: 'text_3',
-            content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad assumenda nam natus non perferendis quam. Amet,\n' +
-                '        aspernatur dicta excepturi illo ipsa minus obcaecati odit quaerat quisquam reiciendis, repellat suscipit\n' +
-                '        unde?'
-        },
-    ]
+
     const icons = [
         {
             forward: <svg className="w-20 h-20 cursor-pointer" fill="none" stroke="white" viewBox="0 0 24 24"
@@ -89,7 +67,6 @@ export default function Slider() {
     return (
         <div className={styles.container}>
             <div id={'wrap'} className={styles.wrapper}>
-
             {sliders.map((info:SliderModel,index)=>
                 <div key={index} className={styles.img} style={{transform: `translateX(${pos}px)`}}>
                     <div className={styles.title}>
@@ -103,15 +80,17 @@ export default function Slider() {
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
+
                     <img src={'http://167.172.176.175/storage/'+info.image} className={'w-full h-full'}/>
+
                 </div>
+
             )}
 
-                {images.map((value, index) =>
-
-                    <div></div>
-                )}
+                {<div></div>}
 
             </div>
 
@@ -123,7 +102,7 @@ export default function Slider() {
                         {icons[1].back}
                     </div>
                     <div>
-                        {sliders.map((value:SliderModel) => <div>{value.title}</div>)}
+
 
                     </div>
                     <div className={styles.forward} onClick={(e) => (

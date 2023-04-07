@@ -9,7 +9,7 @@ import Footer from "../../components/footer";
 import React from "react";
 
 export default function Main(){
-    return <>
+    return <div className='w-screen'>
         <div data-aos='fade-up' data-aos-duration='1000'>
 
             <section>
@@ -38,9 +38,7 @@ export default function Main(){
             <section>
                 <News/>
             </section>
-            <section>
-                <Footer/>
-            </section>
+
         </div>
-    </>
+    </div>
 }
