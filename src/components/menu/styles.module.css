@@ -26,9 +26,6 @@ nav ul {
 
 .list ul  li:first-child{
   @apply  flex flex-row self-start m-auto   self-start    border-0 p-0 items-center}
-nav ul li:nth-child(2){
-  @apply  text-green-400
-}
 
 
 

@@ -48,8 +48,8 @@ export default function ContentMenu() {
 
         <div className={style.container}>
 
-            <h1 className='text-[40px] font-bold'>{(typeMenu?.submenu.menus !== null) ? typeMenu?.submenu.menus.name.toUpperCase() : ''}</h1>
-            <div className='text-[70px] mt-4'> {typeMenu?.submenu.name.toUpperCase()}</div>
+            <h1 className='text-[40px] text-gray-400 font-bold'>{(typeMenu?.submenu.menus !== null) ? typeMenu?.submenu.menus.name.toUpperCase() : ''}</h1>
+            <div className='text-[70px] text-gray-800 mt-4'> {typeMenu?.submenu.name.toUpperCase()}</div>
             <img className='w-full h-1/4 mt-4 rounded-2xl align-middle' src={'http://167.172.176.175/storage/' + typeMenu?.image}/>
             <div className={'mt-4'} dangerouslySetInnerHTML={createMarkup(typeMenu?.description)}/>
 

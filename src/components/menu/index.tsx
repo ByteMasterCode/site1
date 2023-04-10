@@ -47,8 +47,6 @@ export default function Menu() {
     }, []);
 
 
-
-
     return (
 
         <div className={styles.container}>
@@ -75,19 +73,19 @@ export default function Menu() {
 
                                     </button>
                                     <ul className="absolute hidden  text-gray-700 w-max pt-1 group-hover:block">
-                                        {value.sub_menu.map((subs: SubMenu,index) => {
+                                        {value.sub_menu.map((subs: SubMenu, index) => {
                                             console.log(subs.id)
                                             return (
                                                 <li key={index} className="">
                                                     {subs.type.name === 'menu' ? <Link
                                                         to={`/menu/${subs.id}/${subs.type.name}`}
                                                         className=" bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-
-                                                    >{subs.name}</Link> : subs.type.name === 'file'? <Link
-                                                        to={'/file?id=' + subs.id + '&type=' + subs.type.name}
+                                                    >{subs.name}</Link> : subs.type.name === 'file' ? <Link
+                                                        to={'/file/' + subs.id + '/' + subs.type.name}
                                                         className=" bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-
-                                                    >{subs.name}</Link>: ''}
+                                                    >{subs.name}</Link> : subs.type.name === 'hierarchy' ? <Link to={`/hierarchy/${subs.id}/${subs.type.name}`}
+                                                        >{subs.name}</Link> : ''
+                                                        }
 
                                                 </li>
                                             )

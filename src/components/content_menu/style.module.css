@@ -1,5 +1,7 @@
 .container{
-    @apply flex flex-col h-full m-10 shadow-lg p-10 text-3xl rounded-2xl}
+    @apply flex flex-col h-full m-10 shadow-lg p-10 text-3xl rounded-2xl font-bold
+
+}
 ol {
     display: flex;
     flex-direction: column;

@@ -3,6 +3,7 @@ import styles from './styles.module.scss';
 import Content from "./items/content/Content";
 
 export default function News(){
+
     return(
         <div  className={styles.container}>
             <div  className={styles.categories}>
