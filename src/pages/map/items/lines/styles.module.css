@@ -21,15 +21,15 @@
   @apply w-[40vh] absolute text-green-600 text-5xl font-bold ml-[30vh] mt-[11vh];
 }
 .main h2 {
-  @apply w-[40vh] bg-transparent text-amber-600 absolute ml-[31vh] mt-[4vh];
+  @apply w-[40vh] bg-transparent text-amber-600 absolute ml-72 mt-[4vh];
 }
 
 .main_vertical {
-  @apply absolute w-[0.3vh] h-[18vh] bg-green-400 translate-x-[80vh];
+  @apply absolute w-[0.1vw] h-[16.6vh] bg-green-400 translate-x-[780px];
 }
 
 .main_horizontal {
-  @apply absolute w-[55vh] h-[0.3vh] bg-green-400 translate-y-[17.7vh] translate-x-[25vh];
+  @apply absolute w-[28vw] h-[0.2vh] bg-green-400 translate-y-[16.4vh] translate-x-[25vh];
 }
 
 /*# sourceMappingURL=styles.module.css.map */

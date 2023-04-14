@@ -9,11 +9,11 @@ export default function ContentMenu() {
 
         const params = useParams();
         const {id}=params;
-    const [typeMenu, setTypeMenu] = useState<FileType>();
+         const [typeMenu, setTypeMenu] = useState<FileType>();
 
     const headers = {"Content-Type": "application/json",};
     const contentMenuApi =  async ()=>{
-        fetch(`http://167.172.176.175/api/typemenu/?lang=uz&id=${id}`, {
+        fetch(`https://laravel.navoiyuran.uz/api/typemenu/?lang=uz&id=${id}`, {
             method: "GET",
             headers: {'Accept': 'application/json'}
         })
@@ -50,7 +50,7 @@ export default function ContentMenu() {
 
             <h1 className='text-[40px] text-gray-400 font-bold'>{(typeMenu?.submenu.menus !== null) ? typeMenu?.submenu.menus.name.toUpperCase() : ''}</h1>
             <div className='text-[70px] text-gray-800 mt-4'> {typeMenu?.submenu.name.toUpperCase()}</div>
-            <img className='w-full h-1/4 mt-4 rounded-2xl align-middle' src={'http://167.172.176.175/storage/' + typeMenu?.image}/>
+            <img className='w-full h-1/4 mt-4 rounded-2xl align-middle' src={'https://laravel.navoiyuran.uz/storage/' + typeMenu?.image}/>
             <div className={'mt-4'} dangerouslySetInnerHTML={createMarkup(typeMenu?.description)}/>
 
 

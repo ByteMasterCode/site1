@@ -12,7 +12,7 @@ export default function Footer () {
 
         const headers = {"Content-Type": "application/json",};
         useEffect(() => {
-            fetch('http://167.172.176.175/api/menu/?lang=uz', {method: "GET", headers: {'Accept': 'application/json'}})
+            fetch('https://laravel.navoiyuran.uz/api/menu/?lang=uz', {method: "GET", headers: {'Accept': 'application/json'}})
                 .then(async (response) => response.json())
                 .then((data) => {
                     console.log(data);
@@ -65,7 +65,7 @@ export default function Footer () {
                                                         </Link>
                                                    : subs.type.name === 'file' ?   <Link to={'/files?id=' + subs.id+'&type='+subs.type.name}
                                                                                          className="mb-2 inline-block text-base leading-loose text-body-color hover:text-primary">
-                                                            SaaS Development
+                                                            {subs.name}
                                                         </Link> :''}
                                                 </li>
                                             )

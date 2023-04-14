@@ -7,8 +7,12 @@ import Horizontal, {MainTitle} from "./items/lines/Horizontal";
 import {Vertical,Circle} from "./items/lines/Horizontal";
 import arrow from '../../resources/img/arr.png';
 import AOS from 'aos';
+import comeco from '../../resources/img/cameco_white.png'
+import marubeni from '../../resources/img/marubeni_white.png'
+import itochu from '../../resources/img/icochu_white.png'
 import 'aos/dist/aos.css'
 import exp from "constants";
+import Item from "./items/item/item";
 export  default function  Map(){
     useEffect(()=>{
         AOS.init();
@@ -61,11 +65,25 @@ export  default function  Map(){
                    <div className={'flex absolute'} data-aos="zoom-in" data-aos-delay="0"  data-aos-duration="100">
                        <Circle/>
                    </div>
+                   <div className={'absolute translate-x-[200px] translate-y-[250px]'}>
+                       <div className='w-5 h-5  absolute  z-[-1]   border-red-300 border-2 cursor-pointer rounded-full -translate-x-[0px] animate-ping -translate-y-[0px]'>
 
-                   <div className='w-full h-full'>
-                        <div className='w-1 h-[100px] bg-green-400 ml-[1000px]'/>
+                       </div>
+                    <Item name={'Canada'} img={comeco} color={'bg-red-400'} country={'Canada'}/>
                    </div>
+                   <div className={'absolute translate-x-[1300px] translate-y-[350px]'}>
+                       <div className='w-5 h-5  absolute z-[-1]    border-blue-300 border-2 cursor-pointer rounded-full -translate-x-[0px] animate-ping -translate-y-[0px]'>
 
+                       </div>
+                   <Item name={'Canada'} img={marubeni} color={'bg-blue-400'} country={'Yaponiya'}/>
+                   </div>
+                   <div className={'absolute translate-x-[1300px] translate-y-[370px]'}>
+                       <div className='w-5 h-5   absolute z-[-1]   border-blue-300 border-2 cursor-pointer rounded-full -translate-x-[0px] animate-ping -translate-y-[10px]'>
+
+                       </div>
+                       <Item name={'Canada'} img={itochu} color={'bg-blue-400'} country={'Yaponiya'}/>
+
+                   </div>
                </div>
 
            )
@@ -74,7 +92,7 @@ export  default function  Map(){
     return(
         <div className={styles.container}>
 
-            <img className={'w-full'} src={map}/>
+            <img className={'w-[100wv] h-[100vh]'} src={map}/>
             <div onClick={()=>{
                 if (liste === 1){
 

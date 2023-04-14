@@ -14,24 +14,7 @@ nav ul {
   @apply w-full justify-end}
 
 
-.list ul li{
-  @apply flex flex-col relative ml-5 cursor-pointer border-r-2 pr-4;
 
-}
-.list ul li:hover .sub{
-  @apply flex flex-col text-left;
-}
-
-
-
-.list ul  li:first-child{
-  @apply  flex flex-row self-start m-auto   self-start    border-0 p-0 items-center}
-
-
-
-.list ul li:last-child{
-  @apply mr-5 border-0
-}
 .logo{
   @apply flex flex-row
 }

@@ -1,16 +1,13 @@
 import react, {useEffect, useState} from 'react';
 import styles from './styles.module.css'
-import img_1 from '../../resources/img/img_1.jpg';
-import img_2 from '../../resources/img/img_2.jpg';
-import img_3 from '../../resources/img/img_3.jpg';
 import {SliderModel} from "../../model/SliderMode";
-
+import Carousel from "nuka-carousel";
 export default function Slider() {
 
     const [sliders, setsliders] = useState([]);
     const headers = { "Content-Type": "application/json",};
     useEffect(() => {
-         fetch('http://167.172.176.175/api/sliders/?lang=uz',{method:"GET",headers: { 'Accept': 'application/json'}})
+         fetch('https://laravel.navoiyuran.uz/api/sliders/?lang=uz',{method:"GET",headers: { 'Accept': 'application/json'}})
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
@@ -65,53 +62,33 @@ export default function Slider() {
 
 
     return (
-        <div className={styles.container}>
-            <div id={'wrap'} className={styles.wrapper}>
-            {sliders.map((info:SliderModel,index)=>
-                <div key={index} className={styles.img} style={{transform: `translateX(${pos}px)`}}>
-                    <div className={styles.title}>
-                        <div className={styles.area}>
-                            <h1> {info.title}</h1>
-                            <h3 className={'text-white text-xl ml-8'}>{info.content}</h3>
-                            <div
-                                className={'flex mt-5 ml-[550px] justify-center  w-[100px] h-[50px] bg-emerald-300 rounded-lg text-center align-middle text-white'}>
-                                <div className={'mt-2 text-lg'}>
-                                    Перейти
-                                </div>
-                            </div>
-                        </div>
+
+        <Carousel renderCenterLeftControls={({previousSlide})=>(
+            <button className={'flex items-center cursor-pointer bg-green-400/80 hover:bg-green-600 w-[70px] h-[50px]'} onClick={previousSlide}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 35 35" strokeWidth={1.5} stroke="white" className="w-40 h-40 mt-4 ml-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                </svg>
+
+            </button>
+        )}
+        renderCenterRightControls={({nextSlide})=>(
+            <button className={'flex items-center cursor-pointer bg-green-400/80 hover:bg-green-600 w-[70px] h-[50px]'} onClick={nextSlide}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 35 35" strokeWidth={1.5} stroke="white" className="w-40 h-40 mt-4 ml-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
 
 
-                    </div>
+            </button>
+        )}
+        >
+            {
+                sliders.map((value:SliderModel)=>
+                   <div className={'w-full h-full'} >
+                    <img className={styles.img} width={'100%'} height={'100%'}  src={'https://laravel.navoiyuran.uz/storage/'+value.image}/>
+                   </div>
+                )
+            }
+        </Carousel>
 
-                    <img src={'http://167.172.176.175/storage/'+info.image} className={'w-full h-full'}/>
-
-                </div>
-
-            )}
-
-                {<div></div>}
-
-            </div>
-
-            <div className={styles.controller}>
-                <div className={styles.control}>
-                    <div className={styles.back} onClick={(e) => (
-                        back()
-                    )}>
-                        {icons[1].back}
-                    </div>
-                    <div>
-
-
-                    </div>
-                    <div className={styles.forward} onClick={(e) => (
-                        forward()
-                    )}>
-                        {icons[0].forward}
-                    </div>
-                </div>
-            </div>
-        </div>
     )
 }

@@ -1,0 +1,12 @@
+.container{
+    @apply flex flex-col w-full h-auto pl-20 pr-20 mt-10
+}
+
+.wrapper{
+    @apply flex flex-row flex-wrap w-full pl-6 pr-6 mt-2
+}
+.vacansy_item {
+    @apply flex flex-col w-[350px] h-[200px] mr-10 rounded-lg  bg-gray-100 mt-10 mb-10 duration-[0.5s] cursor-pointer}
+
+.vacansy_item:hover{
+    @apply -translate-y-10 shadow-lg}

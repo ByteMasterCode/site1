@@ -1,7 +1,6 @@
 .container{
-  @apply w-screen h-screen overflow-hidden;
+  @apply w-screen h-full;
 }
 .content {
-  @apply flex  flex-col h-screen
-}
+  @apply flex  flex-col h-[100vh]}
 

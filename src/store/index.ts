@@ -1,10 +1,7 @@
-import {configureStore} from "@reduxjs/toolkit";
-import {menusApi} from "./menus/menus.api";
-import {menuReducer} from "./menu/menu.slice";
-
-export  const store = configureStore({
-    reducer:{
-        [menusApi.reducerPath]: menusApi.reducer,contact:menuReducer
-    }
-})
-export type  TypeRootState = ReturnType<typeof store.getState>
+import {combineReducers, createStore} from "redux";
+import {HistoryReducer} from "./history/HistoryReducer";
+const rootReducer = combineReducers(
+    {his:HistoryReducer}
+)
+export type  RootState = ReturnType<typeof  rootReducer>;
+export const store = createStore(rootReducer);

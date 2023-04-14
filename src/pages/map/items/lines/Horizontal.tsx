@@ -30,7 +30,7 @@ export function Circle(){
     return(
         <div className={styles.circle}>
 
-            <img src={whitelogo} className={'w-5 h-5 absolute translate-x-[0.2vh] translate-y-[0.2vh]'}/>
+            <img src={whitelogo} className={'w-6 h-6 absolute translate-x-[0.2vh] translate-y-[0.2vh]'}/>
             <span className={styles.outline_circle} >
 
             </span>
@@ -51,10 +51,10 @@ export  function MainTitle(){
             <div className={'flex absolute'} data-aos="fade-left" data-aos-delay="1000"  data-aos-duration="2000">
             <h2> Davlat Korxonasi</h2>
             </div>
-            <div className={'flex absolute'} data-aos="fade-down" data-aos-delay="400"  data-aos-duration="2000">
+            <div className={'flex fixed'} data-aos="fade-down" data-aos-delay="400"  data-aos-duration="2000">
             <div className={styles.main_vertical}/>
             </div>
-            <div className={'flex absolute'} data-aos="fade-left" data-aos-delay="400"  data-aos-duration="2000">
+            <div className={'flex fixed'} data-aos="fade-left" data-aos-delay="400"  data-aos-duration="2000">
             <div  className={styles.main_horizontal}/>
             </div>
         </div>

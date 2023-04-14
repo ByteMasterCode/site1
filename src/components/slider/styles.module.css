@@ -1,9 +1,9 @@
 .container {
-  @apply w-full h-full relative;
+  @apply relative w-full h-full ;
 }
 
 .wrapper {
-  @apply w-screen h-full  overflow-hidden flex flex-nowrap;
+  @apply w-auto h-full  overflow-hidden flex flex-nowrap;
 }
 
 .img {

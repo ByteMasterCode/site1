@@ -7,9 +7,10 @@ import Partners from "../../components/partners";
 import News from "../news/News";
 import Footer from "../../components/footer";
 import React from "react";
+import Vacansy from "../Vacansy/Vacansy";
 
 export default function Main(){
-    return <div className='w-screen'>
+    return <div className='w-screen flex flex-col'>
         <div data-aos='fade-up' data-aos-duration='1000'>
 
             <section>
@@ -37,6 +38,12 @@ export default function Main(){
         <div data-aos='fade-up' data-aos-duration='1000'>
             <section>
                 <News/>
+            </section>
+
+        </div>
+        <div data-aos='fade-up' data-aos-duration='1000'>
+            <section>
+                <Vacansy/>
             </section>
 
         </div>

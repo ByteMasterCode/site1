@@ -22,8 +22,8 @@
   }
 }
 .main_vertical{
-   @apply absolute w-[0.3vh] h-[18vh] bg-green-400 translate-x-[80vh]
+   @apply fixed h-[18vh] bg-green-400 translate-x-[30%]
  }
 .main_horizontal{
-  @apply absolute w-[55vh] h-[0.3vh] bg-green-400 translate-y-[17.7vh] translate-x-[25vh]
+  @apply fixed h-[0.3vh] bg-green-400 translate-y-[17.7vh] translate-x-[25vh]
 }

@@ -1,7 +1,7 @@
 import react, {useEffect, useState} from 'react'
 import logo from '../../resources/img/logo.svg'
 import styles from './styles.module.css'
-import {useGetMenusQuery} from "../../store/menus/menus.api";
+
 import {data} from "autoprefixer";
 import {Menus, SubMenu} from "../../model/Menus";
 import ContentMenu from "../content_menu/contentMenu";
@@ -14,7 +14,7 @@ export default function Menu() {
     const getAPI = async (url: string, data: any): Promise<any> => {
         return await axios({
 
-            url: `http://167.172.176.175/api/menu/?lang=uz`,
+            url: `https://laravel.navoiyuran.uz/api/menu/?lang=uz`,
         }).then((response) => {
             console.log(response)
             return {
@@ -72,11 +72,11 @@ export default function Menu() {
 
 
                                     </button>
-                                    <ul className="absolute hidden  text-gray-700 w-max pt-1 group-hover:block">
+                                    <ul className=" absolute hidden  text-gray-700 w-max pt-1 description-[0.5s] group-hover:block">
                                         {value.sub_menu.map((subs: SubMenu, index) => {
                                             console.log(subs.id)
                                             return (
-                                                <li key={index} className="">
+                                                <li key={index} className="p-2 border-b cursor-pointer border-gray-400 hover:bg-green-400 hover:text-white  bg-white">
                                                     {subs.type.name === 'menu' ? <Link
                                                         to={`/menu/${subs.id}/${subs.type.name}`}
                                                         className=" bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"

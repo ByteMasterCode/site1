@@ -14,6 +14,7 @@ import {BrowserRouter} from "react-router-dom";
 import {Routes, Route, Link, Navigate} from 'react-router-dom';
 import ContentMenu from "./components/content_menu/contentMenu";
 import Main from "./pages/Main/Main";
+import Hirarchy from "./components/Hirarchy_Menu/Hirarchy";
 
 function App() {
     useEffect(() => {
@@ -26,6 +27,8 @@ function App() {
             <></>
             <Routes>
                 <Route path="/menu/:id/:type"   element={<ContentMenu/>}/>
+                <Route path="/hierarchy/:id/:type"   element={<Hirarchy/>}/>
+                <Route path="/news/:id/"   element={<Hirarchy/>}/>
             </Routes>
             <Routes><Route path="/" element={<Main/>}/>
                 <Route

@@ -1,3 +1,8 @@
 .container{
-  @apply w-[50vh] h-[80vh] absolute bg-emerald-500
+  @apply w-[25vw] h-[75vh] absolute bg-emerald-500/90 p-8 rounded-lg ml-4 cursor-pointer duration-[1s] mt-2 overflow-scroll }
+.container:hover{
+  @apply -skew-x-6 ml-12 bg-emerald-500
+}
+.title{
+  @apply font-bold text-2xl mb-4 text-yellow-400
 }
