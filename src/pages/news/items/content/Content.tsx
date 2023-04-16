@@ -4,12 +4,16 @@ import ntemp from '../../../../resources/img/ntemp.jpg';
 import {NewsModel} from "../../../../model/NewsModel";
 import {Link} from "react-router-dom";
 import AOS from "aos";
+import {CategoryOneNews} from "../../../../model/CategoryOneNews";
+import {useTypeSelector} from "../../../../store/hooks";
+import {useDispatch} from "react-redux";
 
 
 export default function Content() {
     const [news, setNews] = useState<NewsModel[]>([]);
-
-
+    const [oneCategory,setoneCategory] = useState<CategoryOneNews>();
+    const dispatch = useDispatch();
+    const state = useTypeSelector(state => state);
     const headers = {"Content-Type": "application/json",};
     useEffect(() => {
         AOS.init();
@@ -21,17 +25,22 @@ export default function Content() {
             .then((data) => {
                 console.log(data);
                 setNews(data);
-
             })
             .catch((err) => {
                 console.log(err.message);
             });
+
+
     }, []);
+
     return (
         <div className={styles.container}>
             {
-                news.map((value,index)=>
-                    <div className={styles.main} style={{backgroundImage:`url(https://laravel.navoiyuran.uz/storage/${value.image})`,
+
+              news.map((value,index)=>
+
+
+                    <Link to={`/news/${value.id}`} className={styles.main} style={{backgroundImage:`url(https://laravel.navoiyuran.uz/storage/${value.image})`,
                         backgroundPosition: '50% 50%',
                         backgroundSize: 'cover',
                         backgroundAttachment: 'fixed',
@@ -49,27 +58,27 @@ export default function Content() {
                         <div className={styles.title}>{value.title.substring(0,41)}</div>
                         <div className={styles.main_bottom}>
                         </div>
-                    </div>
+
+                    </Link>
+
                 ).slice(news.length-1,news.length)
             }
             <div className={`${styles.wrapper}`} >
 
                 {news.map((value,index)=>
-                    <div className={styles.item}>
+                    <Link to={`/news/${value.id}`}  className={styles.item}>
                        <img className={'rounded-lg  '} width={'30%'} height={'100%'} src={`https://laravel.navoiyuran.uz/storage/${value.image}`} />
                         <div  className={styles.item_wrapper}>
                         <div className={styles.item_badge}>{value.categories.name}</div>
                             <div className={styles.item_title}>{value.title}</div>
                             <div className={styles.item_description}> {value.description.replace(/(<([^>]+)>)/gi,'').substring(0,60)}</div>
                         </div>
-                    </div>
+                    </Link>
                 ).slice(news.length-3,news.length-1)
                 }
 
-
-
-
             </div>
+
         </div>
     )
 }

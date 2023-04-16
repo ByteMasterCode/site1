@@ -3,6 +3,7 @@ import style from './style.module.css';
 import {redirect, useLocation, useParams} from 'react-router-dom';
 import {FileType} from "../../model/FileType";
 import {HierarchyType} from "../../model/HierarchyType";
+
  export default function Hirarchy(){
      const params = useParams();
      const {id}=params;
@@ -36,7 +37,15 @@ import {HierarchyType} from "../../model/HierarchyType";
 
      return(
          <div className={style.container}>
-             {hierarchyMenu.map((value : HierarchyType) =>value.name)}
+             {
+                 hierarchyMenu.map((value,index)=>
+                     <div className={style.card}>
+                         <img className={'rounded-lg m-4'} width={'200px'} height={'200px'} src={`https://laravel.navoiyuran.uz/storage/${value.image}`} />
+
+                     </div>
+                 )
+             }
+
 
          </div>
      )

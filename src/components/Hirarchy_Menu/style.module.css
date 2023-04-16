@@ -1,4 +1,9 @@
 .container{
-    @apply flex flex-col h-full m-10 shadow-lg p-10 text-3xl rounded-2xl font-bold
-
+    @apply flex flex-col h-full m-10 shadow-lg p-10 text-3xl rounded-2xl font-bold pl-10 pr-10
+}
+.card{
+    @apply flex flex-row w-[100%]  rounded-lg shadow-lg cursor-pointer
+}
+.card_wrapper{
+    @apply flex-col
 }

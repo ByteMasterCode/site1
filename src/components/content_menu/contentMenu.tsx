@@ -30,7 +30,6 @@ export default function ContentMenu() {
         if (typeMenu?.title === null) {
             console.log('null');
             redirect('/')
-
         }
     }
     useEffect(() => {
