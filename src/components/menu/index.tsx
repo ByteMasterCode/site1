@@ -8,6 +8,8 @@ import ContentMenu from "../content_menu/contentMenu";
 import {Routes, Route, Link, useNavigate} from 'react-router-dom';
 import axios from "axios";
 
+
+
 export default function Menu() {
     const [posts, setPosts] = useState<Menus[]>([]);
     const navigate = useNavigate();

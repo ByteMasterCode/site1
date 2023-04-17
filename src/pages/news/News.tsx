@@ -30,6 +30,12 @@ export default function News(){
                 <h1> Yangiliklar </h1>
 
                 <ul>
+                    <li className={state.catego.id === 0 ? '  border-b-4 border-green-400 text-green-400 ':''} onClick={()=>{
+                        dispatch({type:"SET_CURRENT",payload:0})
+                        console.log(state.catego.id);
+                    }}>
+                Barchasi
+                    </li>
                     {newsCategory.map((value:Categories)=>
                         <li className={state.catego.id === value.id ? '  border-b-4 border-green-400 text-green-400 ':''}  onClick={()=>{
                             dispatch({type:"SET_CURRENT",payload:value.id})

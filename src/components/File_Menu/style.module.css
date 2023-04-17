@@ -1,0 +1,9 @@
+.container{
+    @apply flex flex-row flex-wrap m-10 shadow-lg p-10 text-3xl rounded-2xl font-bold
+}
+
+.card{
+    @apply flex flex-row w-[500px] h-[200px] border-4 border-green-400 rounded-lg shadow-lg cursor-pointer overflow-hidden}
+.card_wrapper{
+    @apply flex flex-col
+}

@@ -16,6 +16,7 @@ import ContentMenu from "./components/content_menu/contentMenu";
 import Main from "./pages/Main/Main";
 import Hirarchy from "./components/Hirarchy_Menu/Hirarchy";
 import NewsShow from "./pages/NewsShow/NewsShow";
+import FileMenu from "./components/File_Menu/FileMenu";
 
 function App() {
     useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
             <Routes>
                 <Route path="/menu/:id/:type"   element={<ContentMenu/>}/>
                 <Route path="/hierarchy/:id/:type"   element={<Hirarchy/>}/>
+                <Route path="/file/:id/:type"   element={<FileMenu/>}/>
                 <Route path="/news/:id/"   element={<NewsShow/>}/>
             </Routes>
             <Routes><Route path="/" element={<Main/>}/>
