@@ -1,0 +1,27 @@
+{
+  "partners": {
+        "header": "Our activities",
+        "title": "Partners"
+  },
+  "News": {
+      "title": "News",
+      "menu": "All",
+      "categories": "News Category",
+        "social": "We are in social network"
+  },
+  "Work": {
+    "header": "Open jobs",
+    "modal": {
+      "title": "Job name",
+      "name": "Full name",
+      "email": "email",
+      "phone": "phone",
+      "description": "description",
+      "back": "back",
+      "accept": "accept",
+      "work": "work name : ",
+      "department": "job name : ",
+      "message": "This is a success message!"
+    }
+  }
+}

@@ -3,16 +3,18 @@ import style from './style.module.css';
 import {Menus, SubMenu} from "../../model/Menus";
 import logo from '../../resources/img/logo.svg'
 import {Link} from "react-router-dom";
+import Cookies from "universal-cookie";
 export default function Footer () {
 
 
 
         const [posts, setPosts] = useState([]);
-
+    const cookies = new Cookies();
+    const lang =cookies.get('lang')
 
         const headers = {"Content-Type": "application/json",};
         useEffect(() => {
-            fetch('https://laravel.navoiyuran.uz/api/menu/?lang=uz', {method: "GET", headers: {'Accept': 'application/json'}})
+            fetch(`https://laravel.navoiyuran.uz/api/menu/?lang=${lang}`, {method: "GET", headers: {'Accept': 'application/json'}})
                 .then(async (response) => response.json())
                 .then((data) => {
                     console.log(data);

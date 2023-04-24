@@ -7,13 +7,16 @@ import VerticalTabs from "./items/tab";
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import EmailIcon from '@mui/icons-material/Email';
+import Cookies from "universal-cookie";
  export default function Hirarchy(){
      const params = useParams();
+     const cookies = new Cookies();
+     const lang =cookies.get('lang')
      const {id}=params;
      const [hierarchyMenu, setThierarchy] = useState<HierarchyType[]>([]);
      const headers = {"Content-Type": "application/json",};
      const hierarchyMenuApi =  async ()=>{
-         fetch(`https://laravel.navoiyuran.uz/api/hierarchy/?lang=uz&id=${id}`, {
+         fetch(`https://laravel.navoiyuran.uz/api/hierarchy/?lang=${lang}&id=${id}`, {
              method: "GET",
              headers: {'Accept': 'application/json'}
          })
@@ -50,13 +53,13 @@ import EmailIcon from '@mui/icons-material/Email';
                                 <AssignmentIndIcon sx={{color:'#ccc',width:'40px',height:'40px',marginRight:'10px'}}/> {value.name}
                             </div>
                             <div className={style.contact_item}>
-                                <ContactPhoneIcon sx={{color:'#ccc',width:'40px',height:'40px',marginRight:'10px'}}/> +998 *** *** **
+                                <ContactPhoneIcon sx={{color:'#ccc',width:'40px',height:'40px',marginRight:'10px'}}/> {value.phone}
                             </div>
                             <div className={style.contact_item}>
-                                <EmailIcon sx={{color:'#ccc',width:'40px',height:'40px',marginRight:'10px'}}/> example@mail.com
+                                <EmailIcon sx={{color:'#ccc',width:'40px',height:'40px',marginRight:'10px'}}/> {value.email}
                             </div>
                         </div>
-                     <VerticalTabs/>
+                     <VerticalTabs work={value.work} description={value.description}/>
                      </div>
                  )
              }

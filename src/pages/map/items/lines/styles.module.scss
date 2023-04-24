@@ -14,12 +14,15 @@
 
 .main{
   @apply flex absolute;
-  h1{
-    @apply w-[40vh] absolute text-green-600 text-5xl font-bold ml-[30vh] mt-[11vh]
-  }
+
   h2{
-    @apply w-[40vh] bg-transparent text-amber-600 absolute ml-[31vh] mt-[4vh]
+    @apply w-[40vh] bg-transparent text-amber-600 absolute top-0
   }
+}
+.main h1{
+
+    @apply w-[40vh] absolute text-green-600 text-5xl font-bold top-0
+
 }
 .main_vertical{
    @apply fixed h-[18vh] bg-green-400 translate-x-[30%]

@@ -29,7 +29,7 @@ export default function Content() {
                     <h1> MAMLAKATIMIZ KORXONALARI VA OʼZ EHTIYOJIMIZ UCHUN SULFAT KISLOTA ISHLAB CHIQARAMIZ </h1>
                     </div>
                     <div className={styles.description}>
-                        <div  data-aos="fade-left" data-aos-delay="400"  data-aos-duration="2000">
+                        <div  data-aos="fade-right" data-aos-delay="400"  data-aos-duration="2000">
                             Hozirgi kunda “Navoiyuran” davlat korxonasining asosiy tarkibiy qismlaridan hisoblangan Sulfat kislotasi ishlab chiqarish tsexi 2184-2013 GOST asosida texnik sulfat kislota (N2SO4) ishlab chiqaradi va tabiiy uranni qazib olish uchun asosiy xom ashyo sifatida  ishlatiladi. Shuningdek, “Navoiy kon metallurgiya kombinati” AJ korxonalarida oltin ishlab chiqarishda, “Navoiyazot” AJ va “Navoiy issiqliq elektr stansiyasi” AJ ishlab chiqarish jarayonida xom ashyo sifatida foydalanadi.                        </div>
                    </div>
                 </div>

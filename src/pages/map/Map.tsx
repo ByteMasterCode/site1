@@ -1,17 +1,15 @@
 import React, {useEffect, useState} from "react";
-import styles from './styles.module.css';
-import map from '../../resources/img/map.svg'
+import styles from './style.module.css';
 import uzbekistan from '../../resources/img/uzbekistan.svg';
 import CategoryList from "./items/categoryList/CategoryList";
 import Horizontal, {MainTitle} from "./items/lines/Horizontal";
 import {Vertical,Circle} from "./items/lines/Horizontal";
-import arrow from '../../resources/img/arr.png';
 import AOS from 'aos';
 import comeco from '../../resources/img/cameco_white.png'
 import marubeni from '../../resources/img/marubeni_white.png'
 import itochu from '../../resources/img/icochu_white.png'
 import 'aos/dist/aos.css'
-import exp from "constants";
+
 import Item from "./items/item/item";
 export  default function  Map(){
     useEffect(()=>{
@@ -22,7 +20,6 @@ export  default function  Map(){
     const listes = [{'name':'Navoiy uran davlat korxonasi'},{'name':'Davlatlarga exportlar'}]
     const forward = () => {
         if (count < 2) {
-
             countUpdate(count + 1);
         }
 
@@ -42,7 +39,7 @@ export  default function  Map(){
                    <CategoryList/>
                    <MainTitle/>
                    <div className={styles.uzbekistan}>
-                       <img className={'w-[10vh] h-[10vh] hov'} src={uzbekistan}/>
+                       <img className={'w-[10vw] h-[10vh] hov'} src={uzbekistan}/>
                    </div>
                    <div className={'flex absolute'} data-aos="fade-down" data-aos-delay="600"  data-aos-duration="2000">
                        <Horizontal/>
@@ -59,7 +56,7 @@ export  default function  Map(){
            return (
                <div className='w-full h-full absolute'>
                    <div className={styles.uzbekistan}>
-                       <img className={'w-[10vh] h-[10vh] hov'} src={uzbekistan}/>
+                       <img className={'w-[10vwh] h-[10vh]  absolute'} src={uzbekistan}/>
                    </div>
 
                    <div className={'flex absolute'} data-aos="zoom-in" data-aos-delay="0"  data-aos-duration="100">
@@ -90,9 +87,9 @@ export  default function  Map(){
        }
     }
     return(
-        <div className={styles.container}>
+        <div className={styles.container}  >
 
-            <img className={'w-[100wv] h-[100vh]'} src={map}/>
+
             <div onClick={()=>{
                 if (liste === 1){
 
@@ -107,8 +104,7 @@ export  default function  Map(){
 
                 </div>
 
-                        <div className='w-[200px]  ml-24 -translate-y-[70px] '>{listes[liste].name} </div>
-
+                        <div className='w-[20vw]  ml-24 -translate-y-[70px] '>{listes[liste].name} </div>
 
             </div>
             </div>

@@ -7,7 +7,7 @@
 }
 
 .img {
-  @apply w-full h-full flex-[0_0_auto]  duration-[2s]  ease-in-out;
+  @apply  w-full h-full flex-[0_0_auto]  duration-[2s]  ease-in-out;
 }
 
 .controller {

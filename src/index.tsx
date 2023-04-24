@@ -6,16 +6,40 @@ import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from 'react-router-dom';
 import {Provider} from "react-redux";
 import {store} from "./store";
-
-
+import global_en from './translations/eng/global.json';
+import global_ru from './translations/ru/global.json';
+import global_uz from './translations/uz/global.json';
+import i18next from "i18next";
+import {I18nextProvider, initReactI18next} from "react-i18next";
+import Cookies from "universal-cookie";
+const cookies = new Cookies();
+const lang =cookies.get('lang')
+i18next.init({
+    interpolation:{escapeValue:false},
+    lng:lang,
+    resources:{
+        uz:{
+            global:  global_uz
+        },
+        ru:{
+            global:  global_ru
+        },
+        eng:{
+            global:  global_en
+        }
+    }
+})
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
 
         <BrowserRouter>
+
             <Provider store={store}>
+                <I18nextProvider i18n={i18next}>
             <App/>
+                </I18nextProvider>
             </Provider>
         </BrowserRouter>
 

@@ -7,6 +7,7 @@ import AOS from "aos";
 import {CategoryOneNews} from "../../../../model/CategoryOneNews";
 import {useTypeSelector} from "../../../../store/hooks";
 import {useDispatch} from "react-redux";
+import Cookies from "universal-cookie";
 
 
 export default function Content() {
@@ -15,9 +16,11 @@ export default function Content() {
     const dispatch = useDispatch();
     const state = useTypeSelector(state => state);
     const headers = {"Content-Type": "application/json",};
+    const cookies = new Cookies();
+    const lang =cookies.get('lang')
     useEffect(() => {
         AOS.init();
-        fetch('https://laravel.navoiyuran.uz/api/news/?lang=uz', {
+        fetch(`https://laravel.navoiyuran.uz/api/news/?lang=${lang}`, {
             method: "GET",
             headers: {'Accept': 'application/json'}
         })

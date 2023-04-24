@@ -1,6 +1,11 @@
 .container{
-  @apply flex sticky top-0  w-full h-14 bg-white/100 shadow-lg   duration-300 z-[1]
+  @apply flex flex-col sticky top-0  w-full h-[14vh] bg-white/100 shadow-lg   duration-300 z-[1]
 }
+.wrapper{
+  @apply flex flex-row w-full h-[6vh]
+}
+.topsetting{
+  @apply flex flex-row w-full h-[50%] justify-between items-center}
 .container:hover{
   @apply bg-white
 }
@@ -16,7 +21,7 @@ nav ul {
 
 
 .logo{
-  @apply flex flex-row
+  @apply flex flex-row self-center
 }
 .sub{
   @apply fixed mt-10 w-auto h-auto  bg-black hidden

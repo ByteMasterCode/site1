@@ -2,15 +2,8 @@ import React, {useEffect} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import './App.scss';
-import Home from "./pages/home/Home";
-import History from "./pages/history/History";
-import Map from "./pages/map/Map";
-import Product from "./pages/product/Product";
-import News from "./pages/news/News";
-import Partners from "./components/partners";
 import Footer from "./components/footer";
 import Menu from "./components/menu";
-import {BrowserRouter} from "react-router-dom";
 import {Routes, Route, Link, Navigate} from 'react-router-dom';
 import ContentMenu from "./components/content_menu/contentMenu";
 import Main from "./pages/Main/Main";
@@ -19,12 +12,14 @@ import NewsShow from "./pages/NewsShow/NewsShow";
 import FileMenu from "./components/File_Menu/FileMenu";
 
 function App() {
+
     useEffect(() => {
         AOS.init()
     })
+
     return (
 
-        <div className={'flex flex-col'}>
+        <div className={'flex flex-col overflow-clip'}>
             <Menu/>
             <></>
             <Routes>
@@ -38,7 +33,6 @@ function App() {
                     path=""
                     element={<Navigate to="/" replace/>}
                 />
-
             </Routes>
             <section>
                 <Footer/>
@@ -46,5 +40,4 @@ function App() {
         </div>
     );
 }
-
 export default App;

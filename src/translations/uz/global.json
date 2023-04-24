@@ -1,0 +1,27 @@
+{
+  "partners": {
+    "header": "Bizning foliyat",
+    "title": "Hamkorlarimiz"
+  },
+  "News": {
+    "title": "Yangiliklar",
+    "menu": "Barchasi",
+    "categories": "Yangiliklar kategoriyasi",
+    "social": "Biz ijtimoiy tarmoqlarda"
+  },
+  "Work": {
+    "header": "Ochiq ish o`rinlari",
+    "modal": {
+      "title": "Ish nomi",
+      "name": "To`liq F.I.O",
+      "email": "elektron pochta",
+      "phone": "telefon raqam",
+      "description": "qisqacaha ma`lumot",
+      "back": "ortga",
+      "accept": "tasdiqlash",
+      "work": "ish joyi : ",
+      "department": "mutaxassislik : ",
+      "message": "Murojat movoffaqiyatli jo`natildi!"
+    }
+  }
+}

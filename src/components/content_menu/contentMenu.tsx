@@ -4,16 +4,18 @@ import {FileType} from "../../model/FileType";
 import {redirect, useLocation, useParams} from 'react-router-dom';
 import {info} from "autoprefixer";
 import style from './style.module.css';
+import Cookies from "universal-cookie";
 
 export default function ContentMenu() {
 
         const params = useParams();
         const {id}=params;
          const [typeMenu, setTypeMenu] = useState<FileType>();
-
+    const cookies = new Cookies();
+    const lang =cookies.get('lang')
     const headers = {"Content-Type": "application/json",};
     const contentMenuApi =  async ()=>{
-        fetch(`https://laravel.navoiyuran.uz/api/typemenu/?lang=uz&id=${id}`, {
+        fetch(`https://laravel.navoiyuran.uz/api/typemenu/?lang=${lang}&id=${id}`, {
             method: "GET",
             headers: {'Accept': 'application/json'}
         })

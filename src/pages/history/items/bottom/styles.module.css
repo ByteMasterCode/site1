@@ -1,5 +1,5 @@
 .container {
-    @apply flex flex-row    w-full h-[20vh] overflow-scroll z-0 translate-y-[80vh];
+    @apply flex flex-row    w-full h-[20vh] overflow-scroll  z-0 translate-y-[80vh];
 }
 
 .core {

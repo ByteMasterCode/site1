@@ -18,18 +18,18 @@
   @apply flex absolute;
 }
 .main h1 {
-  @apply w-[40vh] absolute text-green-600 text-5xl font-bold ml-[30vh] mt-[11vh];
+  @apply w-[40vh] absolute text-green-600 text-5xl font-bold top-[9vh] left-[20vw];
 }
 .main h2 {
-  @apply w-[40vh] bg-transparent text-amber-600 absolute ml-72 mt-[4vh];
+  @apply w-[40vh] bg-transparent text-amber-600 absolute top-[2vh] left-[20vw];
 }
 
 .main_vertical {
-  @apply absolute w-[0.1vw] h-[16.6vh] bg-green-400 translate-x-[780px];
+  @apply absolute top-0 w-[0.3vw] h-[16.6vh] bg-green-400 left-[51.4vw];
 }
 
 .main_horizontal {
-  @apply absolute w-[28vw] h-[0.2vh] bg-green-400 translate-y-[16.4vh] translate-x-[25vh];
+  @apply absolute w-[38.3vw] h-[0.4vh] bg-green-400 top-[16vh] left-[13vw];
 }
 
 /*# sourceMappingURL=styles.module.css.map */

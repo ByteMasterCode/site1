@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import styles from './styles.module.css';
+import styles from './style.module.css';
 import whitelogo from '../../../../resources/img/logo_white.svg';
 import excavator from '../../../../resources/img/excavator.svg';
 import city from '../../../../resources/img/city.svg';
@@ -19,7 +19,7 @@ export default function CategoryList(){
                         Navoiy Uran
                         </div>
                     <div className={`${styles.paralel} bg-red-400`}>
-                    <img className={'w-[7vh] h-[7vh] ml-6 mt-3'} src={whitelogo}/>
+                    <img className={'w-[5vw] h-[7vh] ml-6 mt-3'} src={whitelogo}/>
                     </div>
                         <h1>
                             01
@@ -35,7 +35,7 @@ export default function CategoryList(){
                     Shaxarlar
                 </div>
                 <div className={`${styles.paralel} bg-sky-400`}>
-                    <img className={'w-[7vh] h-[7vh] ml-6 mt-3'} src={city}/>
+                    <img className={'w-[5vw] h-[7vh] ml-6 mt-3'} src={city}/>
                 </div>
                 <h1>
                     02
@@ -46,11 +46,11 @@ export default function CategoryList(){
             </div>
             <div data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-delay="600"  data-aos-duration="2000">
             <div className={styles.item}>
-                <div className={`${styles.title} text-green-400`}>
+                <div className={` ${styles.title} text-green-400`}>
                     Qazib olish
                 </div>
                 <div className={`${styles.paralel} bg-green-400`}>
-                    <img className={'w-[7vh] h-[7vh] ml-6 mt-3'} src={excavator}/>
+                    <img className={'w-[5vw] h-[7vh] ml-6 mt-3'} src={excavator}/>
                 </div>
                 <h1>
                     03
@@ -66,7 +66,7 @@ export default function CategoryList(){
                     Zaxira
                 </div>
                 <div className={`${styles.paralel} bg-amber-400`}>
-                    <img className={'w-[7vh] h-[7vh] ml-6 mt-3'} src={stock}/>
+                    <img className={'w-[5vw] h-[7vh] ml-6 mt-3'} src={stock}/>
                 </div>
                 <h1>
                     04

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useTransition} from "react";
 import style from './style.module.css';
 import {redirect, useParams} from "react-router-dom";
 import {HierarchyType} from "../../model/HierarchyType";
@@ -10,6 +10,8 @@ import youtube from '../../resources/img/youtube.png';
 import facebook from '../../resources/img/facebook.png';
 import instagram from '../../resources/img/instagram.png';
 import telegram from '../../resources/img/telegram.png';
+import Cookies from "universal-cookie";
+import {useTranslation} from "react-i18next";
 
 
 export default function  NewsShow(){
@@ -18,8 +20,11 @@ export default function  NewsShow(){
     const {id}=params;
     const [news, setNewsOne] = useState<ShowNews[]>([]);
     const [categories,setCategories] = useState<Categories[]>([])
+    const cookies = new Cookies();
+    const lang =cookies.get('lang')
+    const [t,i18n] = useTranslation("global");
      const newsOne =  async ()=>{
-        fetch(`https://laravel.navoiyuran.uz/api/news/one/?id=${id}&lang=uz`, {
+        fetch(`https://laravel.navoiyuran.uz/api/news/one/?id=${id}&lang=${lang}`, {
             method: "GET",
             headers: {'Accept': 'application/json'}
         })
@@ -83,7 +88,7 @@ export default function  NewsShow(){
 
             <div className={style.categories}>
             <div className={'text-xl text-blue-400 border-b-4 border-blue-300 mb-4 font-bold m-3'}>
-                Yangiliklar kategoriyasi
+                {t("News.categories")}
             </div>
                 <div className={style.categories_container}>
                 {categories.map((value,index)=><div className={style.categories_item}>{value.name}</div>)
@@ -92,7 +97,7 @@ export default function  NewsShow(){
             </div>
                 <div className={style.social}>
                     <div className={'text-xl text-red-400 border-b-4 border-red-300 mb-4 font-bold m-3'}>
-                        Biz Ijtimoiy tarmoqlarda
+                        {t("News.social")}
                     </div>
                     <div className={`${style.social_item} bg-red-500 border-2 border-red-700`}>
                         <img  className={' bg-white  cursor-pointer'} width={42} height={42} src={youtube}/>

@@ -6,14 +6,17 @@ import {FileMenuType} from "../../model/FileMenuType";
 import filemenuIcon from '../../resources/img/filemenu.jpg';
 import Button from '@mui/material/Button';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import Cookies from "universal-cookie";
 export default function FileMenu(){
     const params = useParams();
+    const cookies = new Cookies();
+    const lang =cookies.get('lang')
     const {id}=params;
     const [typeMenu, setTypeMenu] = useState<FileMenuType[]>([]);
 
     const headers = {"Content-Type": "application/json",};
     const contentMenuApi =  async ()=>{
-        fetch(`https://laravel.navoiyuran.uz/api/filemenu/?lang=uz&menu_id=${id}`, {
+        fetch(`https://laravel.navoiyuran.uz/api/filemenu/?lang=${lang}&menu_id=${id}`, {
             method: "GET",
             headers: {'Accept': 'application/json'}
         })

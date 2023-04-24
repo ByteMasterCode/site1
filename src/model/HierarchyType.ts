@@ -4,6 +4,9 @@ export interface HierarchyType {
     description: string
     image: string
     level: number
+    phone: string
+    email: string
+    work: string
     sub_menus_id: string
     menu: Menu
 }

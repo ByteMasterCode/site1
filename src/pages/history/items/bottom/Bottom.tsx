@@ -7,12 +7,15 @@ import {redirect} from "react-router-dom";
 import {History} from "../../../../model/History";
 import {useDispatch, useSelector} from "react-redux";
 import {useTypeSelector} from "../../../../store/hooks";
+import Cookies from "universal-cookie";
 
 export default function Bottom(){
     const [mainyear , setMainYear] = useState<string>();
     const [mainimage,setMainimage] = useState<string>();
     const [maindescription,setMaindescription] = useState<string>();
     const  dispatch = useDispatch();
+    const cookies = new Cookies();
+    const lang =cookies.get('lang')
     const state = useTypeSelector(state => state);
     useEffect(()=>{
 
@@ -21,7 +24,7 @@ export default function Bottom(){
     const [histories, setHistories] = useState([]);
 
     useEffect(() => {
-        fetch(`https://laravel.navoiyuran.uz/api/history/?lang=uz`, {method: "GET", headers: {'Accept': 'application/json'}})
+        fetch(`https://laravel.navoiyuran.uz/api/history/?lang=${lang}`, {method: "GET", headers: {'Accept': 'application/json'}})
             .then(async (response) => response.json())
             .then((info) => {
 

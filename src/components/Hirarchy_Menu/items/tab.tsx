@@ -29,6 +29,7 @@ TabPanel.propTypes = {
     children: PropTypes.node,
     index: PropTypes.number.isRequired,
     value: PropTypes.number.isRequired,
+
 };
 
 function a11yProps(index:any) {
@@ -38,7 +39,7 @@ function a11yProps(index:any) {
     };
 }
 
-export default function VerticalTabs() {
+export default function VerticalTabs(props:any) {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event:any, newValue:any) => {
@@ -62,10 +63,10 @@ export default function VerticalTabs() {
 
             </Tabs>
             <TabPanel value={value} index={0}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, ut.
+                {props.work}
             </TabPanel>
             <TabPanel value={value} index={1}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ea maiores maxime quasi sunt!
+                {props.description.replace(/(<([^>]+)>)/gi, '')}
             </TabPanel>
 
         </Box>
