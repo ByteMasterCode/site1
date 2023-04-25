@@ -6,8 +6,11 @@ import city from '../../../../resources/img/city.svg';
 import stock from '../../../../resources/img/stock.svg';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
+import {useTranslation} from "react-i18next";
 
 export default function CategoryList(){
+    const [t,i18n] = useTranslation("global");
+
     useEffect(()=>{
         AOS.init()
     })
@@ -16,7 +19,7 @@ export default function CategoryList(){
             <div  data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-delay="600"  data-aos-duration="2000">
                     <div className={styles.item}>
                         <div className={`${styles.title} text-red-400`}>
-                        Navoiy Uran
+                            {t("export.item_1.title")}
                         </div>
                     <div className={`${styles.paralel} bg-red-400`}>
                     <img className={'w-[5vw] h-[7vh] ml-6 mt-3'} src={whitelogo}/>
@@ -25,14 +28,14 @@ export default function CategoryList(){
                             01
                         </h1>
                         <div  className={styles.description}>
-                            O‘zbekistion uran qazib olish bo‘yicha yetakchi beshtalikka kirdi </div>
+                            {t("export.item_1.content")} </div>
                     </div>
             </div>
             <div data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-delay="600"  data-aos-duration="2000">
 
             <div className={styles.item}>
                 <div className={`${styles.title} text-sky-400`}>
-                    Shaxarlar
+                    {t("export.item_2.title")}
                 </div>
                 <div className={`${styles.paralel} bg-sky-400`}>
                     <img className={'w-[5vw] h-[7vh] ml-6 mt-3'} src={city}/>
@@ -41,13 +44,13 @@ export default function CategoryList(){
                     02
                 </h1>
                 <div className={styles.description}>
-                    "Navoiyuran" Davlat korxonasi tomonidan O'zbekiston Respublikasining Navoiy, Samarqand va Buxoro viloyatlarida uchta uran qazib olish bo'linmalari tomonidan 18 ta uran koni o'zlashtiriladi.                </div>
+                    {t("export.item_2.content")}              </div>
             </div>
             </div>
             <div data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-delay="600"  data-aos-duration="2000">
             <div className={styles.item}>
                 <div className={` ${styles.title} text-green-400`}>
-                    Qazib olish
+                    {t("export.item_3.title")}
                 </div>
                 <div className={`${styles.paralel} bg-green-400`}>
                     <img className={'w-[5vw] h-[7vh] ml-6 mt-3'} src={excavator}/>
@@ -56,14 +59,14 @@ export default function CategoryList(){
                     03
                 </h1>
                 <div className={styles.description}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsam maiores numquam quos ratione saepe?
+                    {t("export.item_3.content")}
                 </div>
             </div>
             </div>
             <div data-aos="flip-left" data-aos-easing="ease-out-cubic"  data-aos-delay="600"  data-aos-duration="2000">
             <div className={styles.item}>
                 <div className={`${styles.title} text-amber-400`}>
-                    Zaxira
+                    {t("export.item_4.title")}
                 </div>
                 <div className={`${styles.paralel} bg-amber-400`}>
                     <img className={'w-[5vw] h-[7vh] ml-6 mt-3'} src={stock}/>
@@ -72,7 +75,7 @@ export default function CategoryList(){
                     04
                 </h1>
                 <div className={styles.description}>
-                    O‘zbekiston uran qazib olish bo‘yicha yetakchi davlatlardan biridir. Respublikaning uran zaxiralari 132,3 ming tonna (jahon zaxiralarining 2%) deb baholanib, dunyoda 11 o‘rinni egallaydi.
+                    {t("export.item_4.content")}
                 </div>
             </div>
             </div>

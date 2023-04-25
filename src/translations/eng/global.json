@@ -1,13 +1,13 @@
 {
   "partners": {
-        "header": "Our activities",
-        "title": "Partners"
+    "header": "Our activities",
+    "title": "Partners"
   },
   "News": {
-      "title": "News",
-      "menu": "All",
-      "categories": "News Category",
-        "social": "We are in social network"
+    "title": "News",
+    "menu": "All",
+    "categories": "News Category",
+    "social": "We are in social network"
   },
   "Work": {
     "header": "Open jobs",
@@ -22,6 +22,41 @@
       "work": "work name : ",
       "department": "job name : ",
       "message": "This is a success message!"
+    }
+  },
+  "products": {
+    "title": "WE MANUFACTURE SULFURIC ACID FOR ENTERPRISES OF OUR COUNTRY AND OWN NEEDS",
+    "header": "Our products",
+    "content": "At present, the Sulfuric Acid Production Workshop, which is one of the main components of the Navoiyuran State Enterprise, produces technical sulfuric acid (N2SO4) in accordance with GOST 2184-2013 and is used as the main raw material for the extraction of natural uranium. . It is also used as a raw material in the production of gold at the enterprises of Navoi Horse Metallurgical Plant JSC, Navoiyazot JSC and Navoi Thermal Power Plant JSC.",
+    "item_1": {
+      "title": "Sulfuric acid",
+      "content": "Technical sulfuric acid (N2SO4) in accordance with GOST 2184-2013\n"
+    },
+    "item_2": {
+      "title": "Pipe products\n",
+      "content": "Various corrosion and wear resistant tubular products are available\n"
+    },
+    "item_3": {
+      "title": "Mineral resources\n",
+      "content": "Производится различная коррозионно- и абразивостойкая трубная продукция."
+    }
+  },
+  "export": {
+    "item_1": {
+      "title": "Navoi Uran",
+      "content": "Uzbekistan entered the top five in uranium mining\n"
+    },
+    "item_2": {
+      "title": "Cities",
+      "content": "The state enterprise \"Navoiyuran\" will operate 18 uranium deposits in the Navoi, Samarkand and Bukhara regions of the Republic of Uzbekistan with three uranium mining installations.\n"
+    },
+    "item_3": {
+      "title": "Mining\n",
+      "content": ""
+    },
+    "item_4": {
+      "title": "Stock",
+      "content": "Uzbekistan is one of the leading uranium mining countries. Uranium reserves of the republic amount to 132.3 thousand tons (2% of world reserves)\n"
     }
   }
 }

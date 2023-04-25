@@ -23,5 +23,40 @@
       "department": "mutaxassislik : ",
       "message": "Murojat movoffaqiyatli jo`natildi!"
     }
+  },
+  "products": {
+    "title": "MAMLAKATIMIZ KORXONALARI VA OʼZ EHTIYOJIMIZ UCHUN SULFAT KISLOTA ISHLAB CHIQARAMIZ",
+    "content": "Hozirgi kunda “Navoiyuran” davlat korxonasining asosiy tarkibiy qismlaridan hisoblangan Sulfat kislotasi ishlab chiqarish tsexi 2184-2013 GOST asosida texnik sulfat kislota (N2SO4) ishlab chiqaradi va tabiiy uranni qazib olish uchun asosiy xom ashyo sifatida ishlatiladi. Shuningdek, “Navoiy kon metallurgiya kombinati” AJ korxonalarida oltin ishlab chiqarishda, “Navoiyazot” AJ va “Navoiy issiqliq elektr stansiyasi” AJ ishlab chiqarish jarayonida xom ashyo sifatida foydalanadi.",
+    "header": "Bizning maxsulotlar",
+    "item_1": {
+      "title": "Sulfat kislotasi",
+      "content": "2184-2013 GOST asosida texnik sulfat kislota (N2SO4)"
+    },
+    "item_2": {
+      "title": "Quvr maxsulotlari",
+      "content": "Turli karroziya va ishqolanishga chidamli quvur mahsulotlari ishlab chiqariladi."
+    },
+    "item_3": {
+      "title": "Qazilma boyliklar",
+      "content": "Производится различная коррозионно- и абразивостойкая трубная продукция."
+    }
+  },
+  "export": {
+    "item_1": {
+      "title": "Navoiy Uran\n",
+      "content": "O‘zbekistion uran qazib olish bo‘yicha yetakchi beshtalikka kirdi"
+    },
+    "item_2": {
+      "title": "Shaxarlar",
+      "content": "\"Navoiyuran\" Davlat korxonasi tomonidan O'zbekiston Respublikasining Navoiy, Samarqand va Buxoro viloyatlarida uchta uran qazib olish bo'linmalari tomonidan 18 ta uran koni o'zlashtiriladi."
+    },
+    "item_3": {
+      "title": "Qazib olish",
+      "content": ""
+    },
+    "item_4": {
+      "title": "Zaxira",
+      "content": "O‘zbekiston uran qazib olish bo‘yicha yetakchi davlatlardan biridir. Respublikaning uran zaxiralari 132,3 ming tonna (jahon zaxiralarining 2%) deb baholanib, dunyoda 11 o‘rinni egallaydi."
+    }
   }
 }

@@ -60,7 +60,7 @@ export default function Vacansy() {
             )
         };
         console.log(name,phone,work,description,email);
-        fetch('http://127.0.0.1:8000/api/job', requestOptions)
+        fetch('https://laravel.navoiyuran.uz/api/job', requestOptions)
             .then(async response => {
                 const isJson = response.headers.get('content-type')?.includes('application/json');
                 const data = isJson && await response.json();
@@ -86,7 +86,7 @@ export default function Vacansy() {
     const cookies = new Cookies();
     const lang =cookies.get('lang')
     useEffect(() => {
-        fetch(`http://127.0.0.1:8000/api/jobs/?lang=${lang}`, {method: "GET", headers: {'Accept': 'application/json'}})
+        fetch(`https://laravel.navoiyuran.uz/api/jobs/?lang=${lang}`, {method: "GET", headers: {'Accept': 'application/json'}})
             .then(async (response) => response.json())
             .then((data) => {
                 console.log(data);

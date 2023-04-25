@@ -3,7 +3,7 @@
 
 }
 .wrapper{
-    @apply flex flex-col h-full m-10 mr-5 shadow-lg p-10 text-3xl rounded-2xl font-bold
+    @apply flex flex-col w-[200%] h-full m-10 mr-5 shadow-lg p-10 text-3xl rounded-2xl font-bold
 }
 .categories{
     @apply w-[80%] h-fit mt-10 rounded-lg shadow-lg
@@ -18,7 +18,7 @@
     @apply -translate-y-2
 }
 .side_menu{
-    @apply w-[80%] flex flex-col h-fit sticky top-10
+    @apply w-[100%] flex flex-col h-fit sticky top-10
 }
 .social{
     @apply flex flex-col w-[80%] h-fit mt-10 rounded-lg shadow-lg

@@ -91,13 +91,7 @@ export  default function  Map(){
 
 
             <div onClick={()=>{
-                if (liste === 1){
 
-                    listeUpdate(0)
-                } else {
-                    listeUpdate(1)
-                }
-                console.log(liste)
             }}  className='w-20 h-20 fixed z-[1]  bottom-24 ml-24 cursor-pointer'>
             <div  className="w-20 h-20 bg-green-400  rounded-full absolute bottom-24 ml-24 cursor-pointer">
                 <div className='w-24 h-24    border-green-300 border-2 cursor-pointer rounded-full -translate-x-[10px] animate-ping -translate-y-[10px]'>
