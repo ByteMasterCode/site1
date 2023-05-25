@@ -15,7 +15,8 @@ export default function Bottom(){
     const [maindescription,setMaindescription] = useState<string>();
     const  dispatch = useDispatch();
     const cookies = new Cookies();
-    const lang =cookies.get('lang')
+    let lang =cookies.get('lang');
+    if (lang === undefined) {lang ='uz';}
     const state = useTypeSelector(state => state);
     useEffect(()=>{
 
@@ -24,7 +25,7 @@ export default function Bottom(){
     const [histories, setHistories] = useState([]);
 
     useEffect(() => {
-        fetch(`https://laravel.navoiyuran.uz/api/history/?lang=${lang}`, {method: "GET", headers: {'Accept': 'application/json'}})
+        fetch(`https://back.navoiyuran.uz/api/history/?lang=${lang}`, {method: "GET", headers: {'Accept': 'application/json'}})
             .then(async (response) => response.json())
             .then((info) => {
 
@@ -51,7 +52,7 @@ export default function Bottom(){
                     dispatch({type:"IMG_UPDATE",payload:histor.image})
                     dispatch({type:"DESCRIPTION_UPDATE",payload:histor.description})
                     dispatch({type:"TITLE_UPDATE",payload:histor.title})
-                }}    className={`flex w-[10vw] h-[20vh] bg-green-900 ${styles.box}`} style={{background:`url(https://laravel.navoiyuran.uz/storage/${histor.image})`,
+                }}    className={`flex w-[10vw] h-[20vh] bg-green-900 ${styles.box}`} style={{background:`url(https://back.navoiyuran.uz/storage/${histor.image})`,
                     backgroundPosition: '50% 50%',
                     backgroundSize: 'cover',
                     backgroundAttachment: 'fixed',

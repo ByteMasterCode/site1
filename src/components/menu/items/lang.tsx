@@ -15,8 +15,8 @@ export default function Lang() {
         if (cookies.get('lang') === undefined) {
             cookies.set('lang', 'uz')
         }
-        console.log(cookies.get('lang'))
-    })
+
+    },[])
 
 
     return (

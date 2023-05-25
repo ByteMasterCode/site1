@@ -1,4 +1,4 @@
-import react from "react";
+import react, {useEffect} from "react";
 import Home from "../home/Home";
 import History from "../history/History";
 import  mapp from  '../../resources/img/map.svg';
@@ -9,7 +9,21 @@ import News from "../news/News";
 import Footer from "../../components/footer";
 import React from "react";
 import Vacansy from "../Vacansy/Vacansy";
+import Cookies from "universal-cookie";
+const cookies = new Cookies();
 export default function Main(){
+
+
+
+        const check =()=>{
+            if (cookies.get('lang')===undefined){
+                cookies.set('lang','uz');
+            }
+        }
+        check();
+        useEffect(()=>{
+            check()
+        })
     return <div className='w-screen flex flex-col'>
         <div data-aos='fade-up' data-aos-duration='1000'>
 

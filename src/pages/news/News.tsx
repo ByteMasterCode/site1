@@ -17,7 +17,7 @@ export default function News(){
     const [t,i18n] = useTranslation("global");
 
     useEffect(() => {
-        fetch(`https://laravel.navoiyuran.uz/api/categories/?lang=${lang}`, {method: "GET", headers: {'Accept': 'application/json'}})
+        fetch(`https://back.navoiyuran.uz/api/categories/?lang=${lang}`, {method: "GET", headers: {'Accept': 'application/json'}})
             .then(async (response) => response.json())
             .then((data) => {
                 console.log(data);

@@ -10,7 +10,7 @@ export default function Slider() {
     const cookies = new Cookies();
     const lang =cookies.get('lang')
     useEffect(() => {
-         fetch(`https://laravel.navoiyuran.uz/api/sliders/?lang=${lang}`,{method:"GET",headers: { 'Accept': 'application/json'}})
+         fetch(`https://back.navoiyuran.uz/api/sliders/?lang=${lang}`,{method:"GET",headers: { 'Accept': 'application/json'}})
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
@@ -87,7 +87,7 @@ export default function Slider() {
             {
                 sliders.map((value:SliderModel)=>
                    <div className={'w-full   h-full'} >
-                    <img className={styles.img} width={'100%'} height={'100%'}  src={'https://laravel.navoiyuran.uz/storage/'+value.image}/>
+                    <img className={styles.img} width={'100%'} height={'100%'}  src={'https://back.navoiyuran.uz/storage/'+value.image}/>
 
                    </div>
                 )

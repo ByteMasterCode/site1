@@ -16,7 +16,7 @@ import Cookies from "universal-cookie";
      const [hierarchyMenu, setThierarchy] = useState<HierarchyType[]>([]);
      const headers = {"Content-Type": "application/json",};
      const hierarchyMenuApi =  async ()=>{
-         fetch(`https://laravel.navoiyuran.uz/api/hierarchy/?lang=${lang}&id=${id}`, {
+         fetch(`https://back.navoiyuran.uz/api/hierarchy/?lang=${lang}&id=${id}`, {
              method: "GET",
              headers: {'Accept': 'application/json'}
          })
@@ -47,7 +47,7 @@ import Cookies from "universal-cookie";
              {
                  hierarchyMenu.map((value,index)=>
                      <div className={style.card}>
-                         <img className={'rounded-lg m-4'} width={'200px'} height={'200px'} src={`https://laravel.navoiyuran.uz/storage/${value.image}`} />
+                         <img className={'rounded-lg m-4'} width={'200px'} height={'200px'} src={`https://back.navoiyuran.uz/storage/${value.image}`} />
                         <div className={style.contacts}>
                             <div className={style.contact_item}>
                                 <AssignmentIndIcon sx={{color:'#ccc',width:'40px',height:'40px',marginRight:'10px'}}/> {value.name}

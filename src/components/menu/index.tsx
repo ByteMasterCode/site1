@@ -16,11 +16,12 @@ export default function Menu() {
 
     const [posts, setPosts] = useState<Menus[]>([]);
 
-    const lang =cookies.get('lang')
+    let lang =cookies.get('lang');
+    if (lang === undefined) {lang ='uz';}
     const getAPI = async (url: string, data: any): Promise<any> => {
         return await axios({
 
-            url: `https://laravel.navoiyuran.uz/api/menu/?lang=${lang}`,
+            url: `https://back.navoiyuran.uz/api/menu/?lang=${lang}`,
         }).then((response) => {
             console.log(response)
             return {
@@ -50,7 +51,7 @@ export default function Menu() {
 
     useEffect(() => {
         getData();
-    }, lang);
+    }, [lang]);
 
 
     return (
@@ -60,7 +61,7 @@ export default function Menu() {
 
                 <Link to={'/'} className="flex p-1 ml-2 self-start items-center ">
                     <img className="h-14" src={logo} alt=""/>
-                    <span className="ml-4 text-green-700 uppercase font-black">Navoiy uran Davlat korxonasi</span>
+                    <span className="ml-4 text-green-700 uppercase font-black">"Navoiyuran" davlat korxonasi</span>
                 </Link>
                 <div className={'mr-2'}>
                 <Lang/>

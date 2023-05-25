@@ -20,7 +20,7 @@ export default function Content() {
     const lang =cookies.get('lang')
     useEffect(() => {
         AOS.init();
-        fetch(`https://laravel.navoiyuran.uz/api/news/?lang=${lang}`, {
+        fetch(`https://back.navoiyuran.uz/api/news/?lang=${lang}`, {
             method: "GET",
             headers: {'Accept': 'application/json'}
         })
@@ -44,7 +44,7 @@ export default function Content() {
 
 
                         <Link to={`/news/${value.id}`} className={styles.main} style={{
-                            backgroundImage: `url(https://laravel.navoiyuran.uz/storage/${value.image})`,
+                            backgroundImage: `url(https://back.navoiyuran.uz/storage/${value.image})`,
                             backgroundPosition: '50% 50%',
                             backgroundSize: 'cover',
                             backgroundAttachment: 'fixed',
@@ -70,7 +70,7 @@ export default function Content() {
 
                         state.catego.id === value.categories.id ?
                             <Link to={`/news/${value.id}`} className={styles.main} style={{
-                                backgroundImage: `url(https://laravel.navoiyuran.uz/storage/${value.image})`,
+                                backgroundImage: `url(https://back.navoiyuran.uz/storage/${value.image})`,
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'cover',
                                 backgroundAttachment: 'fixed',
@@ -99,7 +99,7 @@ export default function Content() {
                     state.catego.id === 0 ? news.map((value, index) =>
                             <Link to={`/news/${value.id}`} className={styles.item}>
                                 <img className={'rounded-lg  '} width={'30%'} height={'100%'}
-                                     src={`https://laravel.navoiyuran.uz/storage/${value.image}`}/>
+                                     src={`https://back.navoiyuran.uz/storage/${value.image}`}/>
                                 <div className={styles.item_wrapper}>
                                     <div className={styles.item_badge}>{value.categories.name}</div>
                                     <div className={styles.item_title}>{value.title}</div>
@@ -112,7 +112,7 @@ export default function Content() {
                             state.catego.id === value.categories.id ?
                                 <Link to={`/news/${value.id}`} className={styles.item}>
                                     <img className={'rounded-lg  '} width={'30%'} height={'100%'}
-                                         src={`https://laravel.navoiyuran.uz/storage/${value.image}`}/>
+                                         src={`https://back.navoiyuran.uz/storage/${value.image}`}/>
                                     <div className={styles.item_wrapper}>
                                         <div className={styles.item_badge}>{value.categories.name}</div>
                                         <div className={styles.item_title}>{value.title}</div>

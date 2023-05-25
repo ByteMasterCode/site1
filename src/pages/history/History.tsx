@@ -21,7 +21,7 @@ export default function History() {
         <div className={styles.container}>
 
             <div className={styles.content}>
-                <img onChange={()=>console.log('changed')} className={'w-full h-full absolute duration-[2s] grayscale hover:grayscale-0'} src={'https://laravel.navoiyuran.uz/storage/'+state.his.image} />
+                <img onChange={()=>console.log('changed')} className={'w-full h-full absolute duration-[2s] grayscale hover:grayscale-0'} src={'https://back.navoiyuran.uz/storage/'+state.his.image} />
                 <Content/>
 
 

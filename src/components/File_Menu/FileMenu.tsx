@@ -10,13 +10,14 @@ import Cookies from "universal-cookie";
 export default function FileMenu(){
     const params = useParams();
     const cookies = new Cookies();
-    const lang =cookies.get('lang')
+    let lang =cookies.get('lang');
+    if (lang === undefined) {lang ='uz';}
     const {id}=params;
     const [typeMenu, setTypeMenu] = useState<FileMenuType[]>([]);
 
     const headers = {"Content-Type": "application/json",};
     const contentMenuApi =  async ()=>{
-        fetch(`https://laravel.navoiyuran.uz/api/filemenu/?lang=${lang}&menu_id=${id}`, {
+        fetch(`https://back.navoiyuran.uz/api/filemenu/?lang=${lang}&menu_id=${id}`, {
             method: "GET",
             headers: {'Accept': 'application/json'}
         })
@@ -39,7 +40,7 @@ export default function FileMenu(){
         <div className={style.container}>
 
             {typeMenu.map((value,index)=><>
-                <a href={`https://laravel.navoiyuran.uz/storage/${value.file}`} className={style.card}>
+                <a href={`https://back.navoiyuran.uz/storage/${value.file}`} className={style.card}>
                 <img width={'200px'} src={filemenuIcon}/>
                     <div className={style.card_wrapper}>
                         <h1 className={'text-green-400 text-[32px] mt-4'}>{value.title}</h1>

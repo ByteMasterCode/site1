@@ -24,7 +24,7 @@ export default function  NewsShow(){
     const lang =cookies.get('lang')
     const [t,i18n] = useTranslation("global");
      const newsOne =  async ()=>{
-        fetch(`https://laravel.navoiyuran.uz/api/news/one/?id=${id}&lang=${lang}`, {
+        fetch(`https://back.navoiyuran.uz/api/news/one/?id=${id}&lang=${lang}`, {
             method: "GET",
             headers: {'Accept': 'application/json'}
         })
@@ -41,7 +41,7 @@ export default function  NewsShow(){
 
     }
     const category =  async ()=>{
-        fetch(`https://laravel.navoiyuran.uz/api/categories/?lang=uz`, {
+        fetch(`https://back.navoiyuran.uz/api/categories/?lang=uz`, {
             method: "GET",
             headers: {'Accept': 'application/json'}
         })
@@ -73,7 +73,7 @@ export default function  NewsShow(){
         <div className={style.container}>
             <div className={style.wrapper}>
             <h1>{news[0]?.title}</h1>
-            <img className='w-full h-1/4 mt-4 rounded-2xl align-middle' src={'https://laravel.navoiyuran.uz/storage/' + news[0]?.image}/>
+            <img className='w-full h-1/4 mt-4 rounded-2xl align-middle' src={'https://back.navoiyuran.uz/storage/' + news[0]?.image}/>
 
             <div className={'mt-4'} dangerouslySetInnerHTML={createMarkup(news[0]?.description)}/>
 
@@ -99,22 +99,30 @@ export default function  NewsShow(){
                     <div className={'text-xl text-red-400 border-b-4 border-red-300 mb-4 font-bold m-3'}>
                         {t("News.social")}
                     </div>
+                    <a href={'https://www.youtube.com/channel/UCLwWOKJjEm3q9vd_k9cMqkA'}>
                     <div className={`${style.social_item} bg-red-500 border-2 border-red-700`}>
                         <img  className={' bg-white  cursor-pointer'} width={42} height={42} src={youtube}/>
                         <div className={'ml-4 self-center text-lg'}>  Youtube</div>
                     </div>
+                    </a>
+                    <a href={'https://www.facebook.com/Navoiyuran-DK-109673825046889'}>
                     <div className={`${style.social_item} bg-blue-500 border-2 border-blue-700`}>
                         <img  className={' bg-white  cursor-pointer'} width={42} height={42} src={facebook}/>
                         <div className={'ml-4 self-center text-lg'}>  Facebook</div>
                     </div>
+                    </a>
+                    <a href={'https://www.instagram.com/navoiyuran/'}>
                     <div className={`${style.social_item} bg-purple-500 border-2 border-purple-700`}>
                         <img  className={' bg-white  cursor-pointer'} width={42} height={42} src={instagram}/>
                         <div className={'ml-4 self-center text-lg'}>  Instagram</div>
                     </div>
+                    </a>
+                    <a href={'https://t.me/Navoiyuran_official'}>
                     <div className={`${style.social_item} bg-sky-500 border-2 border-sky-700`}>
                         <img  className={' bg-white  cursor-pointer'} width={42} height={42} src={telegram}/>
                         <div className={'ml-4 self-center text-lg'}>  Telegram</div>
                     </div>
+                    </a>
                 </div>
             </div>
         </div>

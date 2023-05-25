@@ -10,11 +10,12 @@ export default function Footer () {
 
         const [posts, setPosts] = useState([]);
     const cookies = new Cookies();
-    const lang =cookies.get('lang')
 
+    let lang =cookies.get('lang');
+    if (lang === undefined) {lang ='uz';}
         const headers = {"Content-Type": "application/json",};
         useEffect(() => {
-            fetch(`https://laravel.navoiyuran.uz/api/menu/?lang=${lang}`, {method: "GET", headers: {'Accept': 'application/json'}})
+            fetch(`https://back.navoiyuran.uz/api/menu/?lang=${lang}`, {method: "GET", headers: {'Accept': 'application/json'}})
                 .then(async (response) => response.json())
                 .then((data) => {
                     console.log(data);

@@ -10,11 +10,19 @@ import Main from "./pages/Main/Main";
 import Hirarchy from "./components/Hirarchy_Menu/Hirarchy";
 import NewsShow from "./pages/NewsShow/NewsShow";
 import FileMenu from "./components/File_Menu/FileMenu";
-
+import Cookies from "universal-cookie";
+const cookies = new Cookies();
 function App() {
+
+    const check =()=>{
+        if (cookies.get('lang')===undefined){
+            cookies.set('lang','uz');
+        }
+    }
 
     useEffect(() => {
         AOS.init()
+
     })
 
     return (
